@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "17900353059",
+    "project_id": "travelhub-74640",
+    "storage_bucket": "travelhub-74640.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:17900353059:android:78cb02eb51b5ae82066396",
+        "android_client_info": {
+          "package_name": "com.example.travelhub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "17900353059-9o1hibr8cer3ek1bie41k635hhtk8685.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvahWs0s32VmQWGFaHSMrKuyyXjmxg9_E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "17900353059-9o1hibr8cer3ek1bie41k635hhtk8685.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
