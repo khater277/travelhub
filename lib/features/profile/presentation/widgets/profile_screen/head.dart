@@ -57,7 +57,7 @@ class ProfileHead extends StatelessWidget {
             child: Icon(
               IconBroken.Profile,
               color: AppColors.teal,
-              size: AppSize.s60,
+              size: AppSize.s25,
             ),
           )
       ],
