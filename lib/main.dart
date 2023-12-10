@@ -1,3 +1,4 @@
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:travelhub/app/app.dart';
 import 'package:travelhub/app/bloc_observer.dart';
 import 'package:travelhub/app/locator.dart';
@@ -20,6 +21,7 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
   setupGetIt();
+  await Sp.init();
   await Hive.initFlutter();
   await locator<UserStorage>().init();
   await locator<HotelsStorage>().init();

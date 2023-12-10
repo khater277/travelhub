@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:travelhub/app/locator.dart';
 import 'package:travelhub/config/app_theme.dart';
 import 'package:travelhub/core/local_storage/keys.dart';
@@ -16,6 +17,13 @@ import 'package:travelhub/features/home/presentation/screens/home_screen.dart';
 import 'package:travelhub/features/hotels/cubit/hotels_cubit.dart';
 import 'package:travelhub/features/maps/cubit/maps_cubit.dart';
 import 'package:travelhub/features/profile/cubit/profile_cubit.dart';
+
+class Sp {
+  static SharedPreferences? sp;
+  static Future<void> init() async {
+    sp = await SharedPreferences.getInstance();
+  }
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -64,10 +72,12 @@ class MyApp extends StatelessWidget {
             child: MaterialApp(
               debugShowCheckedModeBanner: false,
               theme: AppTheme.lightTheme(),
-              home: locator<UserStorage>().getData(id: HiveKeys.currentUser) ==
-                      null
-                  ? const LoginScreen()
-                  : const HomeScreen(),
+              home:
+                  // locator<UserStorage>().getData(id: HiveKeys.currentUser) ==
+                  //         null
+                  Sp.sp!.getBool('login') != true
+                      ? const LoginScreen()
+                      : const HomeScreen(),
               // const MapScreen(),
               // const LoginScreen(),
             ),

@@ -1,3 +1,4 @@
+import 'package:travelhub/app/app.dart';
 import 'package:travelhub/core/errors/failures.dart';
 import 'package:travelhub/core/local_storage/keys.dart';
 import 'package:travelhub/core/local_storage/user_storage.dart';
@@ -38,13 +39,12 @@ class AuthRepositoryImpl implements AuthRepository {
           image: response.user!.photoURL,
         );
         final addUser = await addUserToFirestore(user: user);
-        addUser.fold(
-          (failure) {
-            return Left(failure);
-          },
-          (success) =>
-              userStorage.saveData(id: HiveKeys.currentUser, data: user),
-        );
+        addUser.fold((failure) {
+          return Left(failure);
+        }, (success) async {
+          userStorage.saveData(id: HiveKeys.currentUser, data: user);
+          await Sp.sp!.setBool('login', true);
+        });
         return Right(response);
       } on FirebaseAuthException catch (error) {
         return Left(ServerFailure(error: error, type: NetworkErrorTypes.auth));
@@ -72,8 +72,9 @@ class AuthRepositoryImpl implements AuthRepository {
           (failure) {
             return Left(failure);
           },
-          (currentUser) {
+          (currentUser) async {
             userStorage.saveData(id: HiveKeys.currentUser, data: currentUser);
+            await Sp.sp!.setBool('login', true);
             debugPrint("WELCOME ${currentUser.name}");
           },
         );
@@ -108,17 +109,17 @@ class AuthRepositoryImpl implements AuthRepository {
                 image: response.user!.photoURL,
               );
               final addUser = await addUserToFirestore(user: user);
-              addUser.fold(
-                (failure) {
-                  return Left(failure);
-                },
-                (success) =>
-                    userStorage.saveData(id: HiveKeys.currentUser, data: user),
-              );
+              addUser.fold((failure) {
+                return Left(failure);
+              }, (success) async {
+                userStorage.saveData(id: HiveKeys.currentUser, data: user);
+                await Sp.sp!.setBool('login', true);
+              });
             },
-            (currentUser) {
+            (currentUser) async {
               debugPrint("USER ALREADY EXIST");
               userStorage.saveData(id: HiveKeys.currentUser, data: currentUser);
+              await Sp.sp!.setBool('login', true);
             },
           );
           return Right(response);
@@ -157,17 +158,17 @@ class AuthRepositoryImpl implements AuthRepository {
                 image: response.user!.photoURL,
               );
               final addUser = await addUserToFirestore(user: user);
-              addUser.fold(
-                (failure) {
-                  return Left(failure);
-                },
-                (success) =>
-                    userStorage.saveData(id: HiveKeys.currentUser, data: user),
-              );
+              addUser.fold((failure) {
+                return Left(failure);
+              }, (success) async {
+                userStorage.saveData(id: HiveKeys.currentUser, data: user);
+                await Sp.sp!.setBool('login', true);
+              });
             },
-            (currentUser) {
+            (currentUser) async {
               debugPrint("USER ALREADY EXIST");
               userStorage.saveData(id: HiveKeys.currentUser, data: currentUser);
+              await Sp.sp!.setBool('login', true);
             },
           );
           return Right(response);
