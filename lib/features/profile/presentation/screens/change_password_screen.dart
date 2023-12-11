@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:travelhub/app/locator.dart';
 import 'package:travelhub/core/shared_widgets/back_button.dart';
-import 'package:travelhub/core/shared_widgets/button.dart';
 import 'package:travelhub/core/shared_widgets/snack_bar.dart';
 import 'package:travelhub/core/shared_widgets/text.dart';
 import 'package:travelhub/core/utils/app_colors.dart';
 import 'package:travelhub/core/utils/app_fonts.dart';
 import 'package:travelhub/core/utils/app_values.dart';
 import 'package:travelhub/features/profile/cubit/profile_cubit.dart';
-import 'package:travelhub/features/profile/presentation/widgets/change_password_screen/new_password_confirmation_text_field.dart';
+import 'package:travelhub/features/profile/presentation/widgets/change_password_screen/change_password_button.dart';
 import 'package:travelhub/features/profile/presentation/widgets/change_password_screen/current_password_text_field.dart';
+import 'package:travelhub/features/profile/presentation/widgets/change_password_screen/new_password_confirmation_text_field.dart';
 import 'package:travelhub/features/profile/presentation/widgets/change_password_screen/new_password_text_field.dart';
 
 class ChangePasswordScreen extends StatefulWidget {
@@ -21,7 +21,7 @@ class ChangePasswordScreen extends StatefulWidget {
 }
 
 class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
-  GlobalKey<FormState> key = GlobalKey<FormState>();
+  GlobalKey<FormState> formKey = GlobalKey<FormState>();
   @override
   void initState() {
     locator<ProfileCubit>().initChangePassword();
@@ -68,7 +68,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
             alignment: AlignmentDirectional.topCenter,
             child: SingleChildScrollView(
               child: Form(
-                key: key,
+                key: formKey,
                 child: Column(
                   children: [
                     SizedBox(height: AppHeight.h20),
@@ -86,27 +86,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                     SizedBox(height: AppHeight.h20),
                     const ConfirmNewPasswordTextField(),
                     SizedBox(height: AppHeight.h50),
-                    BlocBuilder<ProfileCubit, ProfileState>(
-                      buildWhen: (previous, current) => current.maybeWhen(
-                        updatePasswordLoading: () => true,
-                        updatePasswordError: (errorMsg) => true,
-                        updatePassword: () => true,
-                        orElse: () => false,
-                      ),
-                      builder: (context, state) {
-                        return CustomButton(
-                          text: "Confirm",
-                          loadingCondition: state ==
-                              const ProfileState.updatePasswordLoading(),
-                          onPressed: () {
-                            if (key.currentState!.validate()) {
-                              locator<ProfileCubit>()
-                                  .reAuthUserAndUpdatePassword();
-                            }
-                          },
-                        );
-                      },
-                    )
+                    ChangePasswordButton(formKey: formKey)
                   ],
                 ),
               ),
