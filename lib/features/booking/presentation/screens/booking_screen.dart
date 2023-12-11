@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:travelhub/app/locator.dart';
 import 'package:travelhub/core/shared_widgets/circle_indicator.dart';
 import 'package:travelhub/core/shared_widgets/snack_bar.dart';
@@ -8,8 +10,6 @@ import 'package:travelhub/core/utils/app_values.dart';
 import 'package:travelhub/features/booking/cubit/booking_cubit.dart';
 import 'package:travelhub/features/booking/presentation/widgets/booking_error.dart';
 import 'package:travelhub/features/booking/presentation/widgets/booking_success.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class BookingScreen extends StatefulWidget {
   const BookingScreen({super.key});
@@ -23,7 +23,7 @@ class _BookingScreenState extends State<BookingScreen>
   @override
   void initState() {
     locator<BookingCubit>().initTabController(this);
-    // BookingCubit.get(context).getMyBookings();
+
     super.initState();
   }
 

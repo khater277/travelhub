@@ -73,11 +73,11 @@ class MyApp extends StatelessWidget {
               home:
                   // locator<UserStorage>().getData(id: HiveKeys.currentUser) ==
                   //         null
-                  // Sp.sp!.getBool('login') != true
-                  //     ? const LoginScreen()
-                  //     : const HomeScreen(),
-                  // const MapScreen(),
-                  const LoginScreen(),
+                  Sp.sp!.getBool('login') != true
+                      ? const LoginScreen()
+                      : const HomeScreen(),
+              // const MapScreen(),
+              // const LoginScreen(),
             ),
           );
         });

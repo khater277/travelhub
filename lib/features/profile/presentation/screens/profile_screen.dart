@@ -24,7 +24,8 @@ class ProfileScreen extends StatelessWidget {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    const ProfileHead(),
+                    // ignore: prefer_const_constructors
+                    ProfileHead(),
                     SizedBox(height: AppHeight.h40),
                     // ignore: prefer_const_constructors
                     ProfileItemsList(),

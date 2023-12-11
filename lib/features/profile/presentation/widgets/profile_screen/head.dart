@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:travelhub/app/locator.dart';
 import 'package:travelhub/config/navigation.dart';
+import 'package:travelhub/core/local_storage/keys.dart';
+import 'package:travelhub/core/local_storage/user_storage.dart';
 import 'package:travelhub/core/shared_widgets/text.dart';
 import 'package:travelhub/core/utils/app_colors.dart';
 import 'package:travelhub/core/utils/app_fonts.dart';
 import 'package:travelhub/core/utils/app_values.dart';
 import 'package:travelhub/core/utils/icons_broken.dart';
-import 'package:travelhub/features/profile/cubit/profile_cubit.dart';
 import 'package:travelhub/features/profile/presentation/screens/edit_profile_screen.dart';
 
 class ProfileHead extends StatelessWidget {
@@ -23,7 +24,9 @@ class ProfileHead extends StatelessWidget {
             children: [
               Flexible(
                 child: LargeHeadText(
-                  text: locator<ProfileCubit>().user.name!,
+                  text: locator<UserStorage>()
+                      .getData(id: HiveKeys.currentUser)!
+                      .name!,
                   size: FontSize.s18,
                   maxLines: 50,
                 ),
@@ -44,11 +47,14 @@ class ProfileHead extends StatelessWidget {
             ],
           ),
         ),
-        if (locator<ProfileCubit>().user.image != null)
+        if (locator<UserStorage>().getData(id: HiveKeys.currentUser)!.image !=
+            null)
           CircleAvatar(
             radius: AppSize.s25,
             backgroundColor: AppColors.teal.withOpacity(0.5),
-            backgroundImage: NetworkImage(locator<ProfileCubit>().user.image!),
+            backgroundImage: NetworkImage(locator<UserStorage>()
+                .getData(id: HiveKeys.currentUser)!
+                .image!),
           )
         else
           CircleAvatar(

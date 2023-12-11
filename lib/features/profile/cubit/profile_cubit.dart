@@ -10,7 +10,6 @@ import 'package:travelhub/app/locator.dart';
 import 'package:travelhub/core/firebase/collections_keys.dart';
 import 'package:travelhub/core/local_storage/keys.dart';
 import 'package:travelhub/core/local_storage/user_storage.dart';
-import 'package:travelhub/features/auth/data/models/current_user/current_user.dart';
 import 'package:travelhub/features/profile/data/models/pofile_item_model.dart';
 import 'package:travelhub/features/profile/domain/usecases/re_auth_with_credential_use_case.dart';
 import 'package:travelhub/features/profile/domain/usecases/update_password_usecase.dart';
@@ -37,8 +36,6 @@ class ProfileCubit extends Cubit<ProfileState> {
     ProfileItemModel(name: "Help Center", icon: Icons.info_rounded),
     ProfileItemModel(name: "Setting", icon: Icons.settings),
   ];
-
-  CurrentUser user = locator<UserStorage>().getData(id: HiveKeys.currentUser)!;
 
   ImagePicker picker = ImagePicker();
   File? profileImage;
