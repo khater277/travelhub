@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:travelhub/app/locator.dart';
 import 'package:travelhub/core/utils/app_colors.dart';
 import 'package:travelhub/core/utils/app_values.dart';
@@ -12,7 +13,9 @@ import 'package:travelhub/features/hotels/presentation/widgets/hotel_details/bod
 
 class HotelDetailsScreen extends StatefulWidget {
   final Hotel hotel;
-  const HotelDetailsScreen({super.key, required this.hotel});
+  final double height;
+  const HotelDetailsScreen(
+      {super.key, required this.hotel, required this.height});
 
   @override
   State<HotelDetailsScreen> createState() => _HotelDetailsScreenState();
@@ -21,11 +24,7 @@ class HotelDetailsScreen extends StatefulWidget {
 class _HotelDetailsScreenState extends State<HotelDetailsScreen> {
   @override
   void initState() {
-    WidgetsBinding.instance.addPostFrameCallback((_) async {
-      locator<HotelsCubit>().initHotelDetailsScreen(
-          height: MediaQuery.sizeOf(context).height * 0.75);
-    });
-
+    locator<HotelsCubit>().initHotelDetailsScreen(height: widget.height);
     super.initState();
   }
 
@@ -38,43 +37,48 @@ class _HotelDetailsScreenState extends State<HotelDetailsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: CustomScrollView(
-        controller: locator<HotelsCubit>().hotelDetailsScrollController!,
-        shrinkWrap: true,
-        physics: const BouncingScrollPhysics(),
-        slivers: [
-          HotelDetailsAppBar(hotel: widget.hotel),
-          SliverToBoxAdapter(
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: AppWidth.w10),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  SizedBox(height: AppHeight.h20),
-                  HotelDetailsHead(hotel: widget.hotel),
-                  Padding(
-                    padding: EdgeInsets.symmetric(vertical: AppHeight.h10),
-                    child: Divider(
-                      thickness: 0.7,
-                      color: AppColors.grey.withOpacity(0.2),
-                    ),
+      body: BlocBuilder<HotelsCubit, HotelsState>(
+        builder: (context, state) {
+          return CustomScrollView(
+            controller: locator<HotelsCubit>().hotelDetailsScrollController!,
+            shrinkWrap: true,
+            physics: const BouncingScrollPhysics(),
+            slivers: [
+              HotelDetailsAppBar(hotel: widget.hotel),
+              SliverToBoxAdapter(
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: AppWidth.w10),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      SizedBox(height: AppHeight.h20),
+                      HotelDetailsHead(hotel: widget.hotel),
+                      Padding(
+                        padding: EdgeInsets.symmetric(vertical: AppHeight.h10),
+                        child: Divider(
+                          thickness: 0.7,
+                          color: AppColors.grey.withOpacity(0.2),
+                        ),
+                      ),
+                      HotelDescription(
+                        description: widget.hotel.description!.content!,
+                      ),
+                      SizedBox(height: AppHeight.h20),
+                      HotelPhotos(
+                        images: widget.hotel.images!.toSet().toList(),
+                      ),
+                      SizedBox(height: AppHeight.h50),
+                      HotelFacilities(
+                          hotelFacilities: widget.hotel.facilities!),
+                      SizedBox(height: AppHeight.h50),
+                    ],
                   ),
-                  HotelDescription(
-                    description: widget.hotel.description!.content!,
-                  ),
-                  SizedBox(height: AppHeight.h20),
-                  HotelPhotos(
-                    images: widget.hotel.images!.toSet().toList(),
-                  ),
-                  SizedBox(height: AppHeight.h50),
-                  HotelFacilities(hotelFacilities: widget.hotel.facilities!),
-                  SizedBox(height: AppHeight.h50),
-                ],
-              ),
-            ),
-          )
-        ],
+                ),
+              )
+            ],
+          );
+        },
       ),
     );
   }

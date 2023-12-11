@@ -81,9 +81,11 @@ class HotelsCubit extends Cubit<HotelsState> {
   }
 
   ScrollController? hotelDetailsScrollController;
-  void initHotelDetailsScreen({required double height}) {
+  void initHotelDetailsScreen({
+    required double height,
+  }) {
     hotelDetailsScrollController = ScrollController();
-    changeHotelDetailsOpacity(height: height);
+    changeHotelDetailsOpacity(height: height * 0.75);
   }
 
   void disposeHotelDetailsScreen() {

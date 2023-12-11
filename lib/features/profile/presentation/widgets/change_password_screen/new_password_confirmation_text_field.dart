@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:travelhub/app/locator.dart';
+import 'package:travelhub/core/utils/app_functions.dart';
 import 'package:travelhub/features/auth/presentation/widgets/text_field_with_title.dart';
 import 'package:travelhub/features/profile/cubit/profile_cubit.dart';
 
@@ -39,15 +40,19 @@ class _ConfirmNewPasswordTextFieldState
               .changeNewPasswordVisibility(visible: visible),
           obscure: !visible,
           validator: (p0) {
-            if (locator<ProfileCubit>().newPasswordController!.text.isEmpty) {
-              return "confirm password can't be empty";
-            } else if (locator<ProfileCubit>().newPasswordController!.text !=
-                locator<ProfileCubit>()
-                    .newPasswordConfirmationController!
-                    .text) {
-              return "new password and confirm password is not matched.";
-            }
-            return null;
+            List<bool> conditions = [
+              locator<ProfileCubit>().newPasswordController!.text.isEmpty,
+              locator<ProfileCubit>().newPasswordController!.text !=
+                  locator<ProfileCubit>()
+                      .newPasswordConfirmationController!
+                      .text,
+            ];
+            List<String> messages = [
+              "confirm password can't be empty",
+              "new password and confirm password is not matched.",
+            ];
+            return AppFunctions.handleTextFieldValidator(
+                conditions: conditions, messages: messages);
           },
         );
       },

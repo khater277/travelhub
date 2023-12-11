@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:travelhub/app/locator.dart';
+import 'package:travelhub/core/utils/app_functions.dart';
 import 'package:travelhub/features/auth/presentation/widgets/text_field_with_title.dart';
 import 'package:travelhub/features/profile/cubit/profile_cubit.dart';
 
@@ -37,19 +38,17 @@ class _CurrentPasswordTextFieldState extends State<CurrentPasswordTextField> {
               .changeCurrentPasswordVisibility(visible: visible),
           obscure: !visible,
           validator: (p0) {
-            if (locator<ProfileCubit>()
-                .currentPasswordController!
-                .text
-                .isEmpty) {
-              return "current password can't be empty";
-            } else if (locator<ProfileCubit>()
-                    .currentPasswordController!
-                    .text
-                    .length <
-                6) {
-              return "current password can't be less than 6 characters";
-            }
-            return null;
+            List<bool> conditions = [
+              locator<ProfileCubit>().currentPasswordController!.text.isEmpty,
+              locator<ProfileCubit>().currentPasswordController!.text.length <
+                  6,
+            ];
+            List<String> messages = [
+              "current password can't be empty",
+              "current password can't be less than 6 characters",
+            ];
+            return AppFunctions.handleTextFieldValidator(
+                conditions: conditions, messages: messages);
           },
         );
       },

@@ -1,4 +1,3 @@
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:travelhub/app/app.dart';
 import 'package:travelhub/app/bloc_observer.dart';
 import 'package:travelhub/app/locator.dart';

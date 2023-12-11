@@ -30,6 +30,11 @@ class LoginButton extends StatelessWidget {
           orElse: () {},
         );
       },
+      buildWhen: (previous, current) => current.maybeWhen(
+        userLoginLoading: () => true,
+        userLoginError: (errorMsg) => true,
+        orElse: () => false,
+      ),
       builder: (context, state) {
         return state.maybeWhen(
           userLoginLoading: () => const CustomCircleIndicator(),

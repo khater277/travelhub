@@ -4,8 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:travelhub/app/locator.dart';
 import 'package:travelhub/config/app_theme.dart';
-import 'package:travelhub/core/local_storage/keys.dart';
-import 'package:travelhub/core/local_storage/user_storage.dart';
 import 'package:travelhub/features/auth/cubit/login/login_cubit.dart';
 import 'package:travelhub/features/auth/cubit/register/register_cubit.dart';
 import 'package:travelhub/features/auth/presentation/screens/login_screen.dart';
@@ -75,11 +73,11 @@ class MyApp extends StatelessWidget {
               home:
                   // locator<UserStorage>().getData(id: HiveKeys.currentUser) ==
                   //         null
-                  Sp.sp!.getBool('login') != true
-                      ? const LoginScreen()
-                      : const HomeScreen(),
-              // const MapScreen(),
-              // const LoginScreen(),
+                  // Sp.sp!.getBool('login') != true
+                  //     ? const LoginScreen()
+                  //     : const HomeScreen(),
+                  // const MapScreen(),
+                  const LoginScreen(),
             ),
           );
         });

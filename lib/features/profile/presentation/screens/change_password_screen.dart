@@ -87,6 +87,12 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                     const ConfirmNewPasswordTextField(),
                     SizedBox(height: AppHeight.h50),
                     BlocBuilder<ProfileCubit, ProfileState>(
+                      buildWhen: (previous, current) => current.maybeWhen(
+                        updatePasswordLoading: () => true,
+                        updatePasswordError: (errorMsg) => true,
+                        updatePassword: () => true,
+                        orElse: () => false,
+                      ),
                       builder: (context, state) {
                         return CustomButton(
                           text: "Confirm",

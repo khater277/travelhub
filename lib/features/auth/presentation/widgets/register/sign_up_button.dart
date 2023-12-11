@@ -36,6 +36,11 @@ class SignUpButton extends StatelessWidget {
           orElse: () {},
         );
       },
+      buildWhen: (previous, current) => current.maybeWhen(
+        registerCreateUserLoading: () => true,
+        registerCreateUserError: (errorMsg) => true,
+        orElse: () => false,
+      ),
       builder: (context, state) {
         return state.maybeWhen(
             registerCreateUserLoading: () => const CustomCircleIndicator(),

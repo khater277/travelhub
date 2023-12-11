@@ -21,7 +21,10 @@ class MapHotelItem extends StatelessWidget {
     return GestureDetector(
       onTap: () => Go.to(
         context: context,
-        screen: HotelDetailsScreen(hotel: hotel),
+        screen: HotelDetailsScreen(
+          hotel: hotel,
+          height: MediaQuery.sizeOf(context).height,
+        ),
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
