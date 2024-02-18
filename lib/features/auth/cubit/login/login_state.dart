@@ -12,4 +12,8 @@ class LoginState with _$LoginState {
   const factory LoginState.userLoginLoading() = _UserLoginLoading;
   const factory LoginState.userLoginSuccess() = _UserLoginSuccess;
   const factory LoginState.userLoginError(String errorMsg) = _UserLoginError;
+  const factory LoginState.resetPasswordLoading() = _resetPasswordLoading;
+  const factory LoginState.resetPasswordSuccess() = _resetPasswordSuccess;
+  const factory LoginState.resetPasswordError(String errorMsg) =
+      _resetPasswordError;
 }

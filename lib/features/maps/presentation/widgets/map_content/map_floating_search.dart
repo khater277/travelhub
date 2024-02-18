@@ -63,8 +63,7 @@ class _MapFloatingSearchState extends State<MapFloatingSearch> {
                 .isEmpty) {
               return const SizedBox();
             } else {
-              // ignore: prefer_const_constructors
-              return  SearchResult();
+              return const SearchResult();
             }
           },
         );

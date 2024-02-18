@@ -41,7 +41,7 @@ class LoginButton extends StatelessWidget {
           orElse: () => CustomButton(
             fillColor: AppColors.teal,
             text: AppStrings.login,
-            onPressed: () {
+            onPressed: () async {
               bool emailValidation =
                   locator<LoginCubit>().emailFormKey!.currentState!.validate();
               bool passwordValidation = locator<LoginCubit>()
@@ -50,6 +50,19 @@ class LoginButton extends StatelessWidget {
                   .validate();
               if (emailValidation && passwordValidation) {
                 locator<LoginCubit>().userLogin();
+                // User? user = FirebaseAuth.instance.currentUser;
+                // if (user == null ||
+                //     user.email != locator<LoginCubit>().emailController!.text) {
+                //   await FirebaseAuth.instance.signOut();
+                //   await FirebaseAuth.instance.signInWithEmailAndPassword(
+                //     email: locator<LoginCubit>().emailController!.text,
+                //     password: locator<LoginCubit>().passwordController!.text,
+                //   );
+                //   user = FirebaseAuth.instance.currentUser!;
+                // }
+                // await user.reload();
+                // final response = user.email;
+                // print("=======>$response");
               }
             },
           ),

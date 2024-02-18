@@ -1,4 +1,4 @@
-package com.example.travelhub
+package com.khaterCS.travelhub
 
 import io.flutter.embedding.android.FlutterActivity
 

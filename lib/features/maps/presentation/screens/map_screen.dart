@@ -1,5 +1,9 @@
 // import 'dart:async';
 
+import 'dart:async';
+
+import 'package:flutter/foundation.dart';
+import 'package:flutter/gestures.dart';
 import 'package:travelhub/app/locator.dart';
 import 'package:travelhub/core/shared_widgets/custom_info_window.dart';
 import 'package:travelhub/core/utils/app_values.dart';
@@ -21,6 +25,12 @@ class MapScreen extends StatefulWidget {
 
 class _MapScreenState extends State<MapScreen> {
   @override
+  void dispose() {
+    locator<MapsCubit>().completer = Completer<GoogleMapController>();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return BlocBuilder<MapsCubit, MapsState>(
       builder: (context, state) {
@@ -33,7 +43,13 @@ class _MapScreenState extends State<MapScreen> {
                 initialCameraPosition:
                     locator<MapsCubit>().currentCameraPosition,
                 mapType: MapType.terrain,
-                zoomControlsEnabled: true,
+                zoomControlsEnabled: false,
+                zoomGesturesEnabled: true,
+                scrollGesturesEnabled: true,
+                mapToolbarEnabled: false,
+                rotateGesturesEnabled: false,
+                tiltGesturesEnabled: false,
+                // zoomControlsEnabled: true,
                 // myLocationEnabled: true,
                 myLocationButtonEnabled: false,
                 markers: locator<MapsCubit>().markers,
@@ -52,6 +68,8 @@ class _MapScreenState extends State<MapScreen> {
                   ),
                   context: context,
                 ),
+                gestureRecognizers: {}..add(Factory<PanGestureRecognizer>(
+                    () => PanGestureRecognizer())),
                 // on
               ),
               CustomInfoWindow(

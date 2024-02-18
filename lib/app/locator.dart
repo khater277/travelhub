@@ -23,6 +23,7 @@ import 'package:travelhub/features/auth/domain/usecases/facebook_sign_in_use_cas
 import 'package:travelhub/features/auth/domain/usecases/google_sign_in_use_case.dart';
 import 'package:travelhub/features/auth/domain/usecases/login_use_case.dart';
 import 'package:travelhub/features/auth/domain/usecases/register_use_case.dart';
+import 'package:travelhub/features/auth/domain/usecases/reset_password_usecase.dart';
 import 'package:travelhub/features/available_rooms/cubit/available_rooms_cubit.dart';
 import 'package:travelhub/features/available_rooms/data/datasources/available_rooms_data_source.dart';
 import 'package:travelhub/features/available_rooms/data/repositories/available_rooms_repository_impl.dart';
@@ -79,6 +80,7 @@ Future<void> setupGetIt() async {
         loginUseCase: locator(),
         googleSignInUseCase: locator(),
         facebookSignInUseCase: locator(),
+        resetPasswordUsecase: locator(),
       ));
   locator.registerLazySingleton<HomeCubit>(() => HomeCubit());
   locator.registerLazySingleton<HotelsCubit>(() => HotelsCubit(
@@ -201,6 +203,8 @@ Future<void> setupGetIt() async {
       () => UpdatePasswordUseCase(profileRepository: locator()));
   locator.registerLazySingleton<ReAuthWithCredentialUseCase>(
       () => ReAuthWithCredentialUseCase(profileRepository: locator()));
+  locator.registerLazySingleton<ResetPasswordUsecase>(
+      () => ResetPasswordUsecase(authRepository: locator()));
 
   /// APIs
   locator.registerLazySingleton<BookingApi>(

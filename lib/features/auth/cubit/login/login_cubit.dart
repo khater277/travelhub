@@ -1,7 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:travelhub/features/auth/data/models/auth_body/body/auth_body.dart';
 import 'package:travelhub/features/auth/domain/usecases/facebook_sign_in_use_case.dart';
 import 'package:travelhub/features/auth/domain/usecases/google_sign_in_use_case.dart';
 import 'package:travelhub/features/auth/domain/usecases/login_use_case.dart';
+import 'package:travelhub/features/auth/domain/usecases/reset_password_usecase.dart';
 import 'package:travelhub/features/hotels/domain/usecases/hotel_usecases.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -14,11 +16,13 @@ class LoginCubit extends Cubit<LoginState> {
   final LoginUseCase loginUseCase;
   final GoogleSignInUseCase googleSignInUseCase;
   final FacebookSignInUseCase facebookSignInUseCase;
-  LoginCubit(
-      {required this.loginUseCase,
-      required this.googleSignInUseCase,
-      required this.facebookSignInUseCase})
-      : super(const LoginState.initial());
+  final ResetPasswordUsecase resetPasswordUsecase;
+  LoginCubit({
+    required this.loginUseCase,
+    required this.googleSignInUseCase,
+    required this.facebookSignInUseCase,
+    required this.resetPasswordUsecase,
+  }) : super(const LoginState.initial());
 
   GlobalKey<FormState>? emailFormKey;
   GlobalKey<FormState>? passwordFormKey;
@@ -57,9 +61,16 @@ class LoginCubit extends Cubit<LoginState> {
         debugPrint("ERROR ==> ${failure.getMessage()} ");
         emit(LoginState.userLoginError(failure.getMessage()));
       },
-      (userCredential) {
-        debugPrint("DONE =====> ");
-        emit(const LoginState.userLoginSuccess());
+      (userCredential) async {
+        User? user = FirebaseAuth.instance.currentUser;
+        await user!.reload();
+        if (user.emailVerified) {
+          debugPrint("DONE =====> ");
+          emit(const LoginState.userLoginSuccess());
+        } else {
+          emit(const LoginState.userLoginError(
+              "Unverified email, please verify your email first and try again."));
+        }
       },
     );
   }
@@ -91,6 +102,15 @@ class LoginCubit extends Cubit<LoginState> {
         debugPrint("DONE =====> ");
         emit(const LoginState.userLoginSuccess());
       },
+    );
+  }
+
+  void resetPassword({required String email}) async {
+    emit(const LoginState.resetPasswordLoading());
+    final response = await resetPasswordUsecase.call(email);
+    response.fold(
+      (failure) => emit(LoginState.resetPasswordError(failure.getMessage())),
+      (result) => emit(const LoginState.resetPasswordSuccess()),
     );
   }
 }

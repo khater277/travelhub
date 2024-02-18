@@ -65,8 +65,6 @@ class AuthRepositoryImpl implements AuthRepository {
       try {
         final response =
             await authRemoteDataSource.loginUser(authBody: authBody);
-        // final user =
-        //     await authRemoteDataSource.getCurrentUser(uid: response.user!.uid);
         final user = await getCurrentUser(uid: response.user!.uid);
         user.fold(
           (failure) {
@@ -230,6 +228,23 @@ class AuthRepositoryImpl implements AuthRepository {
             error:
                 FirebaseException(plugin: '', code: 'no-internet-connection'),
             type: NetworkErrorTypes.firestore));
+      }
+    } else {
+      FirebaseException error =
+          FirebaseException(plugin: '', code: 'no-internet-connection');
+      return Left(
+          ServerFailure(error: error, type: NetworkErrorTypes.firestore));
+    }
+  }
+
+  @override
+  Future<Either<Failure, void>> resetPassword({required String email}) async {
+    if (await networkInfo.connected()) {
+      try {
+        final response = await authRemoteDataSource.resetPassword(email: email);
+        return Right(response);
+      } on FirebaseAuthException catch (error) {
+        return Left(ServerFailure(error: error, type: NetworkErrorTypes.auth));
       }
     } else {
       FirebaseException error =

@@ -85,7 +85,6 @@ class _ConfirmBookingScreenState extends State<ConfirmBookingScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  LargeHeadText(text: "${widget.hotelId}"),
                   Row(
                     children: [
                       Flexible(

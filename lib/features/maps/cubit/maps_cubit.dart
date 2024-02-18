@@ -31,8 +31,7 @@ class MapsCubit extends Cubit<MapsState> {
     required this.placesSuggestionUsecase,
   }) : super(const MapsState.initial());
 
-  final Completer<GoogleMapController> completer =
-      Completer<GoogleMapController>();
+  Completer<GoogleMapController> completer = Completer<GoogleMapController>();
 
   FloatingSearchBarController floatingSearchBarController =
       FloatingSearchBarController();

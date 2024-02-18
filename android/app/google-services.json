@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:17900353059:android:78cb02eb51b5ae82066396",
+        "mobilesdk_app_id": "1:17900353059:android:d00e7130558cc557066396",
         "android_client_info": {
-          "package_name": "com.example.travelhub"
+          "package_name": "com.khaterCS.travelhub"
         }
       },
       "oauth_client": [
@@ -29,6 +29,13 @@
             {
               "client_id": "17900353059-9o1hibr8cer3ek1bie41k635hhtk8685.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "17900353059-auoakkuhp95u0jk7pglte52223gle8e0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.travelhub.RunnerTests"
+              }
             }
           ]
         }

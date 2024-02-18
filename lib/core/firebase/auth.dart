@@ -15,6 +15,7 @@ abstract class AuthViaFirebase {
   Future<UserCredential> reAuthWithCredential(
       {required String currentPassword});
   Future<void> updatePassword({required String newPassword});
+  Future<void> resetPassword({required String email});
 }
 
 class AuthViaFirebaseImpl implements AuthViaFirebase {
@@ -31,13 +32,6 @@ class AuthViaFirebaseImpl implements AuthViaFirebase {
   @override
   Future<UserCredential> signInUserWithEmail(
       {required AuthBody authBody}) async {
-    // _auth
-    //     .signInWithEmailAndPassword(
-    //       email: authBody.email,
-    //       password: authBody.password,
-    //     )
-    //     .then((value) => print(value))
-    //     .catchError((error) => print("====>${error.toString()}"));
     return _auth.signInWithEmailAndPassword(
       email: authBody.email,
       password: authBody.password,
@@ -91,5 +85,10 @@ class AuthViaFirebaseImpl implements AuthViaFirebase {
       password: currentPassword,
     );
     return user!.reauthenticateWithCredential(cred);
+  }
+
+  @override
+  Future<void> resetPassword({required String email}) {
+    return _auth.sendPasswordResetEmail(email: email);
   }
 }

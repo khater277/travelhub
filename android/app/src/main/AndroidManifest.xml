@@ -11,9 +11,9 @@
         
 
     <application
-        android:label="travelhub"
+        android:label="TravelHub"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/launcher_icon">
         
         
    	    
@@ -66,6 +66,6 @@
         </intent-filter>
        </activity>
        <meta-data android:name="com.google.android.geo.API_KEY"
-               android:value="google-maps-api-key"/>
+               android:value="AIzaSyCyedvgcJ2bNFti8O_EZ_O46Mx5hXUbFbM"/>
     </application>
 </manifest>

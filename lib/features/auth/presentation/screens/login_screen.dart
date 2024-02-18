@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:travelhub/app/locator.dart';
+import 'package:travelhub/config/navigation.dart';
 import 'package:travelhub/core/shared_widgets/text.dart';
 import 'package:travelhub/core/utils/app_fonts.dart';
 import 'package:travelhub/core/utils/app_strings.dart';
 import 'package:travelhub/core/utils/app_values.dart';
 import 'package:travelhub/features/auth/cubit/login/login_cubit.dart';
+import 'package:travelhub/features/auth/presentation/screens/reset_password_screen.dart';
 import 'package:travelhub/features/auth/presentation/widgets/register/accept_terms_text.dart';
 import 'package:travelhub/features/auth/presentation/widgets/register/already_have_account.dart';
 import 'package:travelhub/features/auth/presentation/widgets/auth_head.dart';
@@ -57,13 +59,19 @@ class _LoginScreenState extends State<LoginScreen> {
                 SizedBox(height: AppHeight.h30),
                 const LoginTextFields(),
                 SizedBox(height: AppHeight.h20),
-                Align(
-                  alignment: AlignmentDirectional.centerEnd,
-                  child: SecondaryText(
-                    text: AppStrings.forgotPassword,
-                    isLight: true,
-                    size: FontSize.s12,
-                    // isButton: true,
+                GestureDetector(
+                  onTap: () => Go.to(
+                    context: context,
+                    screen: const ResetPasswordScreen(),
+                  ),
+                  child: Align(
+                    alignment: AlignmentDirectional.centerEnd,
+                    child: SecondaryText(
+                      text: AppStrings.forgotPassword,
+                      isLight: true,
+                      size: FontSize.s12,
+                      // isButton: true,
+                    ),
                   ),
                 ),
                 SizedBox(height: AppHeight.h10),

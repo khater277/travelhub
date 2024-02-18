@@ -60,7 +60,11 @@ class RegisterCubit extends Cubit<RegisterState> {
     response.fold(
       (failure) =>
           emit(RegisterState.registerCreateUserError(failure.getMessage())),
-      (user) => emit(RegisterState.registerCreateUserSuccess(user)),
+      (user) async {
+        // user.credential!.
+        await FirebaseAuth.instance.currentUser!.sendEmailVerification();
+        emit(RegisterState.registerCreateUserSuccess(user));
+      },
     );
   }
 }

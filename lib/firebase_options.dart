@@ -45,17 +45,17 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions web = FirebaseOptions(
     apiKey: 'AIzaSyBqlzafBrO_GCVCWY4A51a07k10eRv9iiI',
-    appId: '1:17900353059:web:8c5e7e207e3f3ef6066396',
+    appId: '1:17900353059:web:5977f5a93ec61f05066396',
     messagingSenderId: '17900353059',
     projectId: 'travelhub-74640',
     authDomain: 'travelhub-74640.firebaseapp.com',
     storageBucket: 'travelhub-74640.appspot.com',
-    measurementId: 'G-83KQEHJZ7Q',
+    measurementId: 'G-GCS8TKR90R',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyAvahWs0s32VmQWGFaHSMrKuyyXjmxg9_E',
-    appId: '1:17900353059:android:78cb02eb51b5ae82066396',
+    appId: '1:17900353059:android:d00e7130558cc557066396',
     messagingSenderId: '17900353059',
     projectId: 'travelhub-74640',
     storageBucket: 'travelhub-74640.appspot.com',
@@ -63,21 +63,23 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyDYz1eYFP3ge-VmQPigUWac3Q6n7MTQRj0',
-    appId: '1:17900353059:ios:1b9d4ba94aa07e30066396',
+    appId: '1:17900353059:ios:68a637a03a4517ca066396',
     messagingSenderId: '17900353059',
     projectId: 'travelhub-74640',
     storageBucket: 'travelhub-74640.appspot.com',
-    iosClientId: '17900353059-qovcc7rijqnf88n03bg58b7olmkn1h30.apps.googleusercontent.com',
-    iosBundleId: 'com.example.travelhub',
+    androidClientId: '17900353059-pbdrg1lmtrmpc8147sotsdt9tn8erji6.apps.googleusercontent.com',
+    iosClientId: '17900353059-jqco2g0jcjuos5jeh3sf0qqdadg196jd.apps.googleusercontent.com',
+    iosBundleId: 'com.khaterCS.travelhub',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
     apiKey: 'AIzaSyDYz1eYFP3ge-VmQPigUWac3Q6n7MTQRj0',
-    appId: '1:17900353059:ios:3a745a0827522afd066396',
+    appId: '1:17900353059:ios:221816e4a3e05aec066396',
     messagingSenderId: '17900353059',
     projectId: 'travelhub-74640',
     storageBucket: 'travelhub-74640.appspot.com',
-    iosClientId: '17900353059-auoakkuhp95u0jk7pglte52223gle8e0.apps.googleusercontent.com',
-    iosBundleId: 'com.example.travelhub.RunnerTests',
+    androidClientId: '17900353059-pbdrg1lmtrmpc8147sotsdt9tn8erji6.apps.googleusercontent.com',
+    iosClientId: '17900353059-77eb81snv5u86vi6gq1enlo4563v53ka.apps.googleusercontent.com',
+    iosBundleId: 'com.khaterCS.travelhub.RunnerTests',
   );
 }

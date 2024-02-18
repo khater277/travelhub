@@ -21,6 +21,7 @@ mixin _$AuthExceptionHandler {
     required TResult Function() wrongPassword,
     required TResult Function() emailAlreadyInUse,
     required TResult Function() weakPassword,
+    required TResult Function() unVerifiedEmail,
     required TResult Function() invalidEmail,
     required TResult Function() userNotFound,
     required TResult Function() userDisabled,
@@ -40,6 +41,7 @@ mixin _$AuthExceptionHandler {
     TResult? Function()? wrongPassword,
     TResult? Function()? emailAlreadyInUse,
     TResult? Function()? weakPassword,
+    TResult? Function()? unVerifiedEmail,
     TResult? Function()? invalidEmail,
     TResult? Function()? userNotFound,
     TResult? Function()? userDisabled,
@@ -59,6 +61,7 @@ mixin _$AuthExceptionHandler {
     TResult Function()? wrongPassword,
     TResult Function()? emailAlreadyInUse,
     TResult Function()? weakPassword,
+    TResult Function()? unVerifiedEmail,
     TResult Function()? invalidEmail,
     TResult Function()? userNotFound,
     TResult Function()? userDisabled,
@@ -79,6 +82,7 @@ mixin _$AuthExceptionHandler {
     required TResult Function(WrongPassword value) wrongPassword,
     required TResult Function(EmailAlreadyInUse value) emailAlreadyInUse,
     required TResult Function(WeakPassword value) weakPassword,
+    required TResult Function(UnVerifiedEmail value) unVerifiedEmail,
     required TResult Function(InvalidEmail value) invalidEmail,
     required TResult Function(UserNotFound value) userNotFound,
     required TResult Function(UserDisabled value) userDisabled,
@@ -99,6 +103,7 @@ mixin _$AuthExceptionHandler {
     TResult? Function(WrongPassword value)? wrongPassword,
     TResult? Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult? Function(WeakPassword value)? weakPassword,
+    TResult? Function(UnVerifiedEmail value)? unVerifiedEmail,
     TResult? Function(InvalidEmail value)? invalidEmail,
     TResult? Function(UserNotFound value)? userNotFound,
     TResult? Function(UserDisabled value)? userDisabled,
@@ -119,6 +124,7 @@ mixin _$AuthExceptionHandler {
     TResult Function(WrongPassword value)? wrongPassword,
     TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult Function(WeakPassword value)? weakPassword,
+    TResult Function(UnVerifiedEmail value)? unVerifiedEmail,
     TResult Function(InvalidEmail value)? invalidEmail,
     TResult Function(UserNotFound value)? userNotFound,
     TResult Function(UserDisabled value)? userDisabled,
@@ -197,6 +203,7 @@ class _$WrongPasswordImpl implements WrongPassword {
     required TResult Function() wrongPassword,
     required TResult Function() emailAlreadyInUse,
     required TResult Function() weakPassword,
+    required TResult Function() unVerifiedEmail,
     required TResult Function() invalidEmail,
     required TResult Function() userNotFound,
     required TResult Function() userDisabled,
@@ -219,6 +226,7 @@ class _$WrongPasswordImpl implements WrongPassword {
     TResult? Function()? wrongPassword,
     TResult? Function()? emailAlreadyInUse,
     TResult? Function()? weakPassword,
+    TResult? Function()? unVerifiedEmail,
     TResult? Function()? invalidEmail,
     TResult? Function()? userNotFound,
     TResult? Function()? userDisabled,
@@ -241,6 +249,7 @@ class _$WrongPasswordImpl implements WrongPassword {
     TResult Function()? wrongPassword,
     TResult Function()? emailAlreadyInUse,
     TResult Function()? weakPassword,
+    TResult Function()? unVerifiedEmail,
     TResult Function()? invalidEmail,
     TResult Function()? userNotFound,
     TResult Function()? userDisabled,
@@ -267,6 +276,7 @@ class _$WrongPasswordImpl implements WrongPassword {
     required TResult Function(WrongPassword value) wrongPassword,
     required TResult Function(EmailAlreadyInUse value) emailAlreadyInUse,
     required TResult Function(WeakPassword value) weakPassword,
+    required TResult Function(UnVerifiedEmail value) unVerifiedEmail,
     required TResult Function(InvalidEmail value) invalidEmail,
     required TResult Function(UserNotFound value) userNotFound,
     required TResult Function(UserDisabled value) userDisabled,
@@ -290,6 +300,7 @@ class _$WrongPasswordImpl implements WrongPassword {
     TResult? Function(WrongPassword value)? wrongPassword,
     TResult? Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult? Function(WeakPassword value)? weakPassword,
+    TResult? Function(UnVerifiedEmail value)? unVerifiedEmail,
     TResult? Function(InvalidEmail value)? invalidEmail,
     TResult? Function(UserNotFound value)? userNotFound,
     TResult? Function(UserDisabled value)? userDisabled,
@@ -313,6 +324,7 @@ class _$WrongPasswordImpl implements WrongPassword {
     TResult Function(WrongPassword value)? wrongPassword,
     TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult Function(WeakPassword value)? weakPassword,
+    TResult Function(UnVerifiedEmail value)? unVerifiedEmail,
     TResult Function(InvalidEmail value)? invalidEmail,
     TResult Function(UserNotFound value)? userNotFound,
     TResult Function(UserDisabled value)? userDisabled,
@@ -380,6 +392,7 @@ class _$EmailAlreadyInUseImpl implements EmailAlreadyInUse {
     required TResult Function() wrongPassword,
     required TResult Function() emailAlreadyInUse,
     required TResult Function() weakPassword,
+    required TResult Function() unVerifiedEmail,
     required TResult Function() invalidEmail,
     required TResult Function() userNotFound,
     required TResult Function() userDisabled,
@@ -402,6 +415,7 @@ class _$EmailAlreadyInUseImpl implements EmailAlreadyInUse {
     TResult? Function()? wrongPassword,
     TResult? Function()? emailAlreadyInUse,
     TResult? Function()? weakPassword,
+    TResult? Function()? unVerifiedEmail,
     TResult? Function()? invalidEmail,
     TResult? Function()? userNotFound,
     TResult? Function()? userDisabled,
@@ -424,6 +438,7 @@ class _$EmailAlreadyInUseImpl implements EmailAlreadyInUse {
     TResult Function()? wrongPassword,
     TResult Function()? emailAlreadyInUse,
     TResult Function()? weakPassword,
+    TResult Function()? unVerifiedEmail,
     TResult Function()? invalidEmail,
     TResult Function()? userNotFound,
     TResult Function()? userDisabled,
@@ -450,6 +465,7 @@ class _$EmailAlreadyInUseImpl implements EmailAlreadyInUse {
     required TResult Function(WrongPassword value) wrongPassword,
     required TResult Function(EmailAlreadyInUse value) emailAlreadyInUse,
     required TResult Function(WeakPassword value) weakPassword,
+    required TResult Function(UnVerifiedEmail value) unVerifiedEmail,
     required TResult Function(InvalidEmail value) invalidEmail,
     required TResult Function(UserNotFound value) userNotFound,
     required TResult Function(UserDisabled value) userDisabled,
@@ -473,6 +489,7 @@ class _$EmailAlreadyInUseImpl implements EmailAlreadyInUse {
     TResult? Function(WrongPassword value)? wrongPassword,
     TResult? Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult? Function(WeakPassword value)? weakPassword,
+    TResult? Function(UnVerifiedEmail value)? unVerifiedEmail,
     TResult? Function(InvalidEmail value)? invalidEmail,
     TResult? Function(UserNotFound value)? userNotFound,
     TResult? Function(UserDisabled value)? userDisabled,
@@ -496,6 +513,7 @@ class _$EmailAlreadyInUseImpl implements EmailAlreadyInUse {
     TResult Function(WrongPassword value)? wrongPassword,
     TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult Function(WeakPassword value)? weakPassword,
+    TResult Function(UnVerifiedEmail value)? unVerifiedEmail,
     TResult Function(InvalidEmail value)? invalidEmail,
     TResult Function(UserNotFound value)? userNotFound,
     TResult Function(UserDisabled value)? userDisabled,
@@ -563,6 +581,7 @@ class _$WeakPasswordImpl implements WeakPassword {
     required TResult Function() wrongPassword,
     required TResult Function() emailAlreadyInUse,
     required TResult Function() weakPassword,
+    required TResult Function() unVerifiedEmail,
     required TResult Function() invalidEmail,
     required TResult Function() userNotFound,
     required TResult Function() userDisabled,
@@ -585,6 +604,7 @@ class _$WeakPasswordImpl implements WeakPassword {
     TResult? Function()? wrongPassword,
     TResult? Function()? emailAlreadyInUse,
     TResult? Function()? weakPassword,
+    TResult? Function()? unVerifiedEmail,
     TResult? Function()? invalidEmail,
     TResult? Function()? userNotFound,
     TResult? Function()? userDisabled,
@@ -607,6 +627,7 @@ class _$WeakPasswordImpl implements WeakPassword {
     TResult Function()? wrongPassword,
     TResult Function()? emailAlreadyInUse,
     TResult Function()? weakPassword,
+    TResult Function()? unVerifiedEmail,
     TResult Function()? invalidEmail,
     TResult Function()? userNotFound,
     TResult Function()? userDisabled,
@@ -633,6 +654,7 @@ class _$WeakPasswordImpl implements WeakPassword {
     required TResult Function(WrongPassword value) wrongPassword,
     required TResult Function(EmailAlreadyInUse value) emailAlreadyInUse,
     required TResult Function(WeakPassword value) weakPassword,
+    required TResult Function(UnVerifiedEmail value) unVerifiedEmail,
     required TResult Function(InvalidEmail value) invalidEmail,
     required TResult Function(UserNotFound value) userNotFound,
     required TResult Function(UserDisabled value) userDisabled,
@@ -656,6 +678,7 @@ class _$WeakPasswordImpl implements WeakPassword {
     TResult? Function(WrongPassword value)? wrongPassword,
     TResult? Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult? Function(WeakPassword value)? weakPassword,
+    TResult? Function(UnVerifiedEmail value)? unVerifiedEmail,
     TResult? Function(InvalidEmail value)? invalidEmail,
     TResult? Function(UserNotFound value)? userNotFound,
     TResult? Function(UserDisabled value)? userDisabled,
@@ -679,6 +702,7 @@ class _$WeakPasswordImpl implements WeakPassword {
     TResult Function(WrongPassword value)? wrongPassword,
     TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult Function(WeakPassword value)? weakPassword,
+    TResult Function(UnVerifiedEmail value)? unVerifiedEmail,
     TResult Function(InvalidEmail value)? invalidEmail,
     TResult Function(UserNotFound value)? userNotFound,
     TResult Function(UserDisabled value)? userDisabled,
@@ -703,6 +727,195 @@ class _$WeakPasswordImpl implements WeakPassword {
 
 abstract class WeakPassword implements AuthExceptionHandler {
   const factory WeakPassword() = _$WeakPasswordImpl;
+}
+
+/// @nodoc
+abstract class _$$UnVerifiedEmailImplCopyWith<$Res> {
+  factory _$$UnVerifiedEmailImplCopyWith(_$UnVerifiedEmailImpl value,
+          $Res Function(_$UnVerifiedEmailImpl) then) =
+      __$$UnVerifiedEmailImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$UnVerifiedEmailImplCopyWithImpl<$Res>
+    extends _$AuthExceptionHandlerCopyWithImpl<$Res, _$UnVerifiedEmailImpl>
+    implements _$$UnVerifiedEmailImplCopyWith<$Res> {
+  __$$UnVerifiedEmailImplCopyWithImpl(
+      _$UnVerifiedEmailImpl _value, $Res Function(_$UnVerifiedEmailImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$UnVerifiedEmailImpl implements UnVerifiedEmail {
+  const _$UnVerifiedEmailImpl();
+
+  @override
+  String toString() {
+    return 'AuthExceptionHandler.unVerifiedEmail()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$UnVerifiedEmailImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() wrongPassword,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() weakPassword,
+    required TResult Function() unVerifiedEmail,
+    required TResult Function() invalidEmail,
+    required TResult Function() userNotFound,
+    required TResult Function() userDisabled,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() expiredActionCode,
+    required TResult Function() tooManyRequests,
+    required TResult Function() requestCancelled,
+    required TResult Function() emailExistsWithDifferentCredential,
+    required TResult Function() invalidCredential,
+    required TResult Function() channelError,
+    required TResult Function() undefined,
+    required TResult Function() noInternetConnection,
+  }) {
+    return unVerifiedEmail();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? wrongPassword,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? weakPassword,
+    TResult? Function()? unVerifiedEmail,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? userNotFound,
+    TResult? Function()? userDisabled,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? expiredActionCode,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? emailExistsWithDifferentCredential,
+    TResult? Function()? invalidCredential,
+    TResult? Function()? channelError,
+    TResult? Function()? undefined,
+    TResult? Function()? noInternetConnection,
+  }) {
+    return unVerifiedEmail?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? wrongPassword,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? weakPassword,
+    TResult Function()? unVerifiedEmail,
+    TResult Function()? invalidEmail,
+    TResult Function()? userNotFound,
+    TResult Function()? userDisabled,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? expiredActionCode,
+    TResult Function()? tooManyRequests,
+    TResult Function()? requestCancelled,
+    TResult Function()? emailExistsWithDifferentCredential,
+    TResult Function()? invalidCredential,
+    TResult Function()? channelError,
+    TResult Function()? undefined,
+    TResult Function()? noInternetConnection,
+    required TResult orElse(),
+  }) {
+    if (unVerifiedEmail != null) {
+      return unVerifiedEmail();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(WrongPassword value) wrongPassword,
+    required TResult Function(EmailAlreadyInUse value) emailAlreadyInUse,
+    required TResult Function(WeakPassword value) weakPassword,
+    required TResult Function(UnVerifiedEmail value) unVerifiedEmail,
+    required TResult Function(InvalidEmail value) invalidEmail,
+    required TResult Function(UserNotFound value) userNotFound,
+    required TResult Function(UserDisabled value) userDisabled,
+    required TResult Function(OperationNotAllowed value) operationNotAllowed,
+    required TResult Function(ExpiredActionCode value) expiredActionCode,
+    required TResult Function(TooManyRequests value) tooManyRequests,
+    required TResult Function(RequestCancelled value) requestCancelled,
+    required TResult Function(EmailExistsWithDifferentCredential value)
+        emailExistsWithDifferentCredential,
+    required TResult Function(InvalidCredential value) invalidCredential,
+    required TResult Function(ChannelError value) channelError,
+    required TResult Function(Undefined value) undefined,
+    required TResult Function(NoInternetConnection value) noInternetConnection,
+  }) {
+    return unVerifiedEmail(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(WrongPassword value)? wrongPassword,
+    TResult? Function(EmailAlreadyInUse value)? emailAlreadyInUse,
+    TResult? Function(WeakPassword value)? weakPassword,
+    TResult? Function(UnVerifiedEmail value)? unVerifiedEmail,
+    TResult? Function(InvalidEmail value)? invalidEmail,
+    TResult? Function(UserNotFound value)? userNotFound,
+    TResult? Function(UserDisabled value)? userDisabled,
+    TResult? Function(OperationNotAllowed value)? operationNotAllowed,
+    TResult? Function(ExpiredActionCode value)? expiredActionCode,
+    TResult? Function(TooManyRequests value)? tooManyRequests,
+    TResult? Function(RequestCancelled value)? requestCancelled,
+    TResult? Function(EmailExistsWithDifferentCredential value)?
+        emailExistsWithDifferentCredential,
+    TResult? Function(InvalidCredential value)? invalidCredential,
+    TResult? Function(ChannelError value)? channelError,
+    TResult? Function(Undefined value)? undefined,
+    TResult? Function(NoInternetConnection value)? noInternetConnection,
+  }) {
+    return unVerifiedEmail?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(WrongPassword value)? wrongPassword,
+    TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
+    TResult Function(WeakPassword value)? weakPassword,
+    TResult Function(UnVerifiedEmail value)? unVerifiedEmail,
+    TResult Function(InvalidEmail value)? invalidEmail,
+    TResult Function(UserNotFound value)? userNotFound,
+    TResult Function(UserDisabled value)? userDisabled,
+    TResult Function(OperationNotAllowed value)? operationNotAllowed,
+    TResult Function(ExpiredActionCode value)? expiredActionCode,
+    TResult Function(TooManyRequests value)? tooManyRequests,
+    TResult Function(RequestCancelled value)? requestCancelled,
+    TResult Function(EmailExistsWithDifferentCredential value)?
+        emailExistsWithDifferentCredential,
+    TResult Function(InvalidCredential value)? invalidCredential,
+    TResult Function(ChannelError value)? channelError,
+    TResult Function(Undefined value)? undefined,
+    TResult Function(NoInternetConnection value)? noInternetConnection,
+    required TResult orElse(),
+  }) {
+    if (unVerifiedEmail != null) {
+      return unVerifiedEmail(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UnVerifiedEmail implements AuthExceptionHandler {
+  const factory UnVerifiedEmail() = _$UnVerifiedEmailImpl;
 }
 
 /// @nodoc
@@ -746,6 +959,7 @@ class _$InvalidEmailImpl implements InvalidEmail {
     required TResult Function() wrongPassword,
     required TResult Function() emailAlreadyInUse,
     required TResult Function() weakPassword,
+    required TResult Function() unVerifiedEmail,
     required TResult Function() invalidEmail,
     required TResult Function() userNotFound,
     required TResult Function() userDisabled,
@@ -768,6 +982,7 @@ class _$InvalidEmailImpl implements InvalidEmail {
     TResult? Function()? wrongPassword,
     TResult? Function()? emailAlreadyInUse,
     TResult? Function()? weakPassword,
+    TResult? Function()? unVerifiedEmail,
     TResult? Function()? invalidEmail,
     TResult? Function()? userNotFound,
     TResult? Function()? userDisabled,
@@ -790,6 +1005,7 @@ class _$InvalidEmailImpl implements InvalidEmail {
     TResult Function()? wrongPassword,
     TResult Function()? emailAlreadyInUse,
     TResult Function()? weakPassword,
+    TResult Function()? unVerifiedEmail,
     TResult Function()? invalidEmail,
     TResult Function()? userNotFound,
     TResult Function()? userDisabled,
@@ -816,6 +1032,7 @@ class _$InvalidEmailImpl implements InvalidEmail {
     required TResult Function(WrongPassword value) wrongPassword,
     required TResult Function(EmailAlreadyInUse value) emailAlreadyInUse,
     required TResult Function(WeakPassword value) weakPassword,
+    required TResult Function(UnVerifiedEmail value) unVerifiedEmail,
     required TResult Function(InvalidEmail value) invalidEmail,
     required TResult Function(UserNotFound value) userNotFound,
     required TResult Function(UserDisabled value) userDisabled,
@@ -839,6 +1056,7 @@ class _$InvalidEmailImpl implements InvalidEmail {
     TResult? Function(WrongPassword value)? wrongPassword,
     TResult? Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult? Function(WeakPassword value)? weakPassword,
+    TResult? Function(UnVerifiedEmail value)? unVerifiedEmail,
     TResult? Function(InvalidEmail value)? invalidEmail,
     TResult? Function(UserNotFound value)? userNotFound,
     TResult? Function(UserDisabled value)? userDisabled,
@@ -862,6 +1080,7 @@ class _$InvalidEmailImpl implements InvalidEmail {
     TResult Function(WrongPassword value)? wrongPassword,
     TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult Function(WeakPassword value)? weakPassword,
+    TResult Function(UnVerifiedEmail value)? unVerifiedEmail,
     TResult Function(InvalidEmail value)? invalidEmail,
     TResult Function(UserNotFound value)? userNotFound,
     TResult Function(UserDisabled value)? userDisabled,
@@ -929,6 +1148,7 @@ class _$UserNotFoundImpl implements UserNotFound {
     required TResult Function() wrongPassword,
     required TResult Function() emailAlreadyInUse,
     required TResult Function() weakPassword,
+    required TResult Function() unVerifiedEmail,
     required TResult Function() invalidEmail,
     required TResult Function() userNotFound,
     required TResult Function() userDisabled,
@@ -951,6 +1171,7 @@ class _$UserNotFoundImpl implements UserNotFound {
     TResult? Function()? wrongPassword,
     TResult? Function()? emailAlreadyInUse,
     TResult? Function()? weakPassword,
+    TResult? Function()? unVerifiedEmail,
     TResult? Function()? invalidEmail,
     TResult? Function()? userNotFound,
     TResult? Function()? userDisabled,
@@ -973,6 +1194,7 @@ class _$UserNotFoundImpl implements UserNotFound {
     TResult Function()? wrongPassword,
     TResult Function()? emailAlreadyInUse,
     TResult Function()? weakPassword,
+    TResult Function()? unVerifiedEmail,
     TResult Function()? invalidEmail,
     TResult Function()? userNotFound,
     TResult Function()? userDisabled,
@@ -999,6 +1221,7 @@ class _$UserNotFoundImpl implements UserNotFound {
     required TResult Function(WrongPassword value) wrongPassword,
     required TResult Function(EmailAlreadyInUse value) emailAlreadyInUse,
     required TResult Function(WeakPassword value) weakPassword,
+    required TResult Function(UnVerifiedEmail value) unVerifiedEmail,
     required TResult Function(InvalidEmail value) invalidEmail,
     required TResult Function(UserNotFound value) userNotFound,
     required TResult Function(UserDisabled value) userDisabled,
@@ -1022,6 +1245,7 @@ class _$UserNotFoundImpl implements UserNotFound {
     TResult? Function(WrongPassword value)? wrongPassword,
     TResult? Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult? Function(WeakPassword value)? weakPassword,
+    TResult? Function(UnVerifiedEmail value)? unVerifiedEmail,
     TResult? Function(InvalidEmail value)? invalidEmail,
     TResult? Function(UserNotFound value)? userNotFound,
     TResult? Function(UserDisabled value)? userDisabled,
@@ -1045,6 +1269,7 @@ class _$UserNotFoundImpl implements UserNotFound {
     TResult Function(WrongPassword value)? wrongPassword,
     TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult Function(WeakPassword value)? weakPassword,
+    TResult Function(UnVerifiedEmail value)? unVerifiedEmail,
     TResult Function(InvalidEmail value)? invalidEmail,
     TResult Function(UserNotFound value)? userNotFound,
     TResult Function(UserDisabled value)? userDisabled,
@@ -1112,6 +1337,7 @@ class _$UserDisabledImpl implements UserDisabled {
     required TResult Function() wrongPassword,
     required TResult Function() emailAlreadyInUse,
     required TResult Function() weakPassword,
+    required TResult Function() unVerifiedEmail,
     required TResult Function() invalidEmail,
     required TResult Function() userNotFound,
     required TResult Function() userDisabled,
@@ -1134,6 +1360,7 @@ class _$UserDisabledImpl implements UserDisabled {
     TResult? Function()? wrongPassword,
     TResult? Function()? emailAlreadyInUse,
     TResult? Function()? weakPassword,
+    TResult? Function()? unVerifiedEmail,
     TResult? Function()? invalidEmail,
     TResult? Function()? userNotFound,
     TResult? Function()? userDisabled,
@@ -1156,6 +1383,7 @@ class _$UserDisabledImpl implements UserDisabled {
     TResult Function()? wrongPassword,
     TResult Function()? emailAlreadyInUse,
     TResult Function()? weakPassword,
+    TResult Function()? unVerifiedEmail,
     TResult Function()? invalidEmail,
     TResult Function()? userNotFound,
     TResult Function()? userDisabled,
@@ -1182,6 +1410,7 @@ class _$UserDisabledImpl implements UserDisabled {
     required TResult Function(WrongPassword value) wrongPassword,
     required TResult Function(EmailAlreadyInUse value) emailAlreadyInUse,
     required TResult Function(WeakPassword value) weakPassword,
+    required TResult Function(UnVerifiedEmail value) unVerifiedEmail,
     required TResult Function(InvalidEmail value) invalidEmail,
     required TResult Function(UserNotFound value) userNotFound,
     required TResult Function(UserDisabled value) userDisabled,
@@ -1205,6 +1434,7 @@ class _$UserDisabledImpl implements UserDisabled {
     TResult? Function(WrongPassword value)? wrongPassword,
     TResult? Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult? Function(WeakPassword value)? weakPassword,
+    TResult? Function(UnVerifiedEmail value)? unVerifiedEmail,
     TResult? Function(InvalidEmail value)? invalidEmail,
     TResult? Function(UserNotFound value)? userNotFound,
     TResult? Function(UserDisabled value)? userDisabled,
@@ -1228,6 +1458,7 @@ class _$UserDisabledImpl implements UserDisabled {
     TResult Function(WrongPassword value)? wrongPassword,
     TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult Function(WeakPassword value)? weakPassword,
+    TResult Function(UnVerifiedEmail value)? unVerifiedEmail,
     TResult Function(InvalidEmail value)? invalidEmail,
     TResult Function(UserNotFound value)? userNotFound,
     TResult Function(UserDisabled value)? userDisabled,
@@ -1296,6 +1527,7 @@ class _$OperationNotAllowedImpl implements OperationNotAllowed {
     required TResult Function() wrongPassword,
     required TResult Function() emailAlreadyInUse,
     required TResult Function() weakPassword,
+    required TResult Function() unVerifiedEmail,
     required TResult Function() invalidEmail,
     required TResult Function() userNotFound,
     required TResult Function() userDisabled,
@@ -1318,6 +1550,7 @@ class _$OperationNotAllowedImpl implements OperationNotAllowed {
     TResult? Function()? wrongPassword,
     TResult? Function()? emailAlreadyInUse,
     TResult? Function()? weakPassword,
+    TResult? Function()? unVerifiedEmail,
     TResult? Function()? invalidEmail,
     TResult? Function()? userNotFound,
     TResult? Function()? userDisabled,
@@ -1340,6 +1573,7 @@ class _$OperationNotAllowedImpl implements OperationNotAllowed {
     TResult Function()? wrongPassword,
     TResult Function()? emailAlreadyInUse,
     TResult Function()? weakPassword,
+    TResult Function()? unVerifiedEmail,
     TResult Function()? invalidEmail,
     TResult Function()? userNotFound,
     TResult Function()? userDisabled,
@@ -1366,6 +1600,7 @@ class _$OperationNotAllowedImpl implements OperationNotAllowed {
     required TResult Function(WrongPassword value) wrongPassword,
     required TResult Function(EmailAlreadyInUse value) emailAlreadyInUse,
     required TResult Function(WeakPassword value) weakPassword,
+    required TResult Function(UnVerifiedEmail value) unVerifiedEmail,
     required TResult Function(InvalidEmail value) invalidEmail,
     required TResult Function(UserNotFound value) userNotFound,
     required TResult Function(UserDisabled value) userDisabled,
@@ -1389,6 +1624,7 @@ class _$OperationNotAllowedImpl implements OperationNotAllowed {
     TResult? Function(WrongPassword value)? wrongPassword,
     TResult? Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult? Function(WeakPassword value)? weakPassword,
+    TResult? Function(UnVerifiedEmail value)? unVerifiedEmail,
     TResult? Function(InvalidEmail value)? invalidEmail,
     TResult? Function(UserNotFound value)? userNotFound,
     TResult? Function(UserDisabled value)? userDisabled,
@@ -1412,6 +1648,7 @@ class _$OperationNotAllowedImpl implements OperationNotAllowed {
     TResult Function(WrongPassword value)? wrongPassword,
     TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult Function(WeakPassword value)? weakPassword,
+    TResult Function(UnVerifiedEmail value)? unVerifiedEmail,
     TResult Function(InvalidEmail value)? invalidEmail,
     TResult Function(UserNotFound value)? userNotFound,
     TResult Function(UserDisabled value)? userDisabled,
@@ -1479,6 +1716,7 @@ class _$ExpiredActionCodeImpl implements ExpiredActionCode {
     required TResult Function() wrongPassword,
     required TResult Function() emailAlreadyInUse,
     required TResult Function() weakPassword,
+    required TResult Function() unVerifiedEmail,
     required TResult Function() invalidEmail,
     required TResult Function() userNotFound,
     required TResult Function() userDisabled,
@@ -1501,6 +1739,7 @@ class _$ExpiredActionCodeImpl implements ExpiredActionCode {
     TResult? Function()? wrongPassword,
     TResult? Function()? emailAlreadyInUse,
     TResult? Function()? weakPassword,
+    TResult? Function()? unVerifiedEmail,
     TResult? Function()? invalidEmail,
     TResult? Function()? userNotFound,
     TResult? Function()? userDisabled,
@@ -1523,6 +1762,7 @@ class _$ExpiredActionCodeImpl implements ExpiredActionCode {
     TResult Function()? wrongPassword,
     TResult Function()? emailAlreadyInUse,
     TResult Function()? weakPassword,
+    TResult Function()? unVerifiedEmail,
     TResult Function()? invalidEmail,
     TResult Function()? userNotFound,
     TResult Function()? userDisabled,
@@ -1549,6 +1789,7 @@ class _$ExpiredActionCodeImpl implements ExpiredActionCode {
     required TResult Function(WrongPassword value) wrongPassword,
     required TResult Function(EmailAlreadyInUse value) emailAlreadyInUse,
     required TResult Function(WeakPassword value) weakPassword,
+    required TResult Function(UnVerifiedEmail value) unVerifiedEmail,
     required TResult Function(InvalidEmail value) invalidEmail,
     required TResult Function(UserNotFound value) userNotFound,
     required TResult Function(UserDisabled value) userDisabled,
@@ -1572,6 +1813,7 @@ class _$ExpiredActionCodeImpl implements ExpiredActionCode {
     TResult? Function(WrongPassword value)? wrongPassword,
     TResult? Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult? Function(WeakPassword value)? weakPassword,
+    TResult? Function(UnVerifiedEmail value)? unVerifiedEmail,
     TResult? Function(InvalidEmail value)? invalidEmail,
     TResult? Function(UserNotFound value)? userNotFound,
     TResult? Function(UserDisabled value)? userDisabled,
@@ -1595,6 +1837,7 @@ class _$ExpiredActionCodeImpl implements ExpiredActionCode {
     TResult Function(WrongPassword value)? wrongPassword,
     TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult Function(WeakPassword value)? weakPassword,
+    TResult Function(UnVerifiedEmail value)? unVerifiedEmail,
     TResult Function(InvalidEmail value)? invalidEmail,
     TResult Function(UserNotFound value)? userNotFound,
     TResult Function(UserDisabled value)? userDisabled,
@@ -1662,6 +1905,7 @@ class _$TooManyRequestsImpl implements TooManyRequests {
     required TResult Function() wrongPassword,
     required TResult Function() emailAlreadyInUse,
     required TResult Function() weakPassword,
+    required TResult Function() unVerifiedEmail,
     required TResult Function() invalidEmail,
     required TResult Function() userNotFound,
     required TResult Function() userDisabled,
@@ -1684,6 +1928,7 @@ class _$TooManyRequestsImpl implements TooManyRequests {
     TResult? Function()? wrongPassword,
     TResult? Function()? emailAlreadyInUse,
     TResult? Function()? weakPassword,
+    TResult? Function()? unVerifiedEmail,
     TResult? Function()? invalidEmail,
     TResult? Function()? userNotFound,
     TResult? Function()? userDisabled,
@@ -1706,6 +1951,7 @@ class _$TooManyRequestsImpl implements TooManyRequests {
     TResult Function()? wrongPassword,
     TResult Function()? emailAlreadyInUse,
     TResult Function()? weakPassword,
+    TResult Function()? unVerifiedEmail,
     TResult Function()? invalidEmail,
     TResult Function()? userNotFound,
     TResult Function()? userDisabled,
@@ -1732,6 +1978,7 @@ class _$TooManyRequestsImpl implements TooManyRequests {
     required TResult Function(WrongPassword value) wrongPassword,
     required TResult Function(EmailAlreadyInUse value) emailAlreadyInUse,
     required TResult Function(WeakPassword value) weakPassword,
+    required TResult Function(UnVerifiedEmail value) unVerifiedEmail,
     required TResult Function(InvalidEmail value) invalidEmail,
     required TResult Function(UserNotFound value) userNotFound,
     required TResult Function(UserDisabled value) userDisabled,
@@ -1755,6 +2002,7 @@ class _$TooManyRequestsImpl implements TooManyRequests {
     TResult? Function(WrongPassword value)? wrongPassword,
     TResult? Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult? Function(WeakPassword value)? weakPassword,
+    TResult? Function(UnVerifiedEmail value)? unVerifiedEmail,
     TResult? Function(InvalidEmail value)? invalidEmail,
     TResult? Function(UserNotFound value)? userNotFound,
     TResult? Function(UserDisabled value)? userDisabled,
@@ -1778,6 +2026,7 @@ class _$TooManyRequestsImpl implements TooManyRequests {
     TResult Function(WrongPassword value)? wrongPassword,
     TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult Function(WeakPassword value)? weakPassword,
+    TResult Function(UnVerifiedEmail value)? unVerifiedEmail,
     TResult Function(InvalidEmail value)? invalidEmail,
     TResult Function(UserNotFound value)? userNotFound,
     TResult Function(UserDisabled value)? userDisabled,
@@ -1845,6 +2094,7 @@ class _$RequestCancelledImpl implements RequestCancelled {
     required TResult Function() wrongPassword,
     required TResult Function() emailAlreadyInUse,
     required TResult Function() weakPassword,
+    required TResult Function() unVerifiedEmail,
     required TResult Function() invalidEmail,
     required TResult Function() userNotFound,
     required TResult Function() userDisabled,
@@ -1867,6 +2117,7 @@ class _$RequestCancelledImpl implements RequestCancelled {
     TResult? Function()? wrongPassword,
     TResult? Function()? emailAlreadyInUse,
     TResult? Function()? weakPassword,
+    TResult? Function()? unVerifiedEmail,
     TResult? Function()? invalidEmail,
     TResult? Function()? userNotFound,
     TResult? Function()? userDisabled,
@@ -1889,6 +2140,7 @@ class _$RequestCancelledImpl implements RequestCancelled {
     TResult Function()? wrongPassword,
     TResult Function()? emailAlreadyInUse,
     TResult Function()? weakPassword,
+    TResult Function()? unVerifiedEmail,
     TResult Function()? invalidEmail,
     TResult Function()? userNotFound,
     TResult Function()? userDisabled,
@@ -1915,6 +2167,7 @@ class _$RequestCancelledImpl implements RequestCancelled {
     required TResult Function(WrongPassword value) wrongPassword,
     required TResult Function(EmailAlreadyInUse value) emailAlreadyInUse,
     required TResult Function(WeakPassword value) weakPassword,
+    required TResult Function(UnVerifiedEmail value) unVerifiedEmail,
     required TResult Function(InvalidEmail value) invalidEmail,
     required TResult Function(UserNotFound value) userNotFound,
     required TResult Function(UserDisabled value) userDisabled,
@@ -1938,6 +2191,7 @@ class _$RequestCancelledImpl implements RequestCancelled {
     TResult? Function(WrongPassword value)? wrongPassword,
     TResult? Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult? Function(WeakPassword value)? weakPassword,
+    TResult? Function(UnVerifiedEmail value)? unVerifiedEmail,
     TResult? Function(InvalidEmail value)? invalidEmail,
     TResult? Function(UserNotFound value)? userNotFound,
     TResult? Function(UserDisabled value)? userDisabled,
@@ -1961,6 +2215,7 @@ class _$RequestCancelledImpl implements RequestCancelled {
     TResult Function(WrongPassword value)? wrongPassword,
     TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult Function(WeakPassword value)? weakPassword,
+    TResult Function(UnVerifiedEmail value)? unVerifiedEmail,
     TResult Function(InvalidEmail value)? invalidEmail,
     TResult Function(UserNotFound value)? userNotFound,
     TResult Function(UserDisabled value)? userDisabled,
@@ -2033,6 +2288,7 @@ class _$EmailExistsWithDifferentCredentialImpl
     required TResult Function() wrongPassword,
     required TResult Function() emailAlreadyInUse,
     required TResult Function() weakPassword,
+    required TResult Function() unVerifiedEmail,
     required TResult Function() invalidEmail,
     required TResult Function() userNotFound,
     required TResult Function() userDisabled,
@@ -2055,6 +2311,7 @@ class _$EmailExistsWithDifferentCredentialImpl
     TResult? Function()? wrongPassword,
     TResult? Function()? emailAlreadyInUse,
     TResult? Function()? weakPassword,
+    TResult? Function()? unVerifiedEmail,
     TResult? Function()? invalidEmail,
     TResult? Function()? userNotFound,
     TResult? Function()? userDisabled,
@@ -2077,6 +2334,7 @@ class _$EmailExistsWithDifferentCredentialImpl
     TResult Function()? wrongPassword,
     TResult Function()? emailAlreadyInUse,
     TResult Function()? weakPassword,
+    TResult Function()? unVerifiedEmail,
     TResult Function()? invalidEmail,
     TResult Function()? userNotFound,
     TResult Function()? userDisabled,
@@ -2103,6 +2361,7 @@ class _$EmailExistsWithDifferentCredentialImpl
     required TResult Function(WrongPassword value) wrongPassword,
     required TResult Function(EmailAlreadyInUse value) emailAlreadyInUse,
     required TResult Function(WeakPassword value) weakPassword,
+    required TResult Function(UnVerifiedEmail value) unVerifiedEmail,
     required TResult Function(InvalidEmail value) invalidEmail,
     required TResult Function(UserNotFound value) userNotFound,
     required TResult Function(UserDisabled value) userDisabled,
@@ -2126,6 +2385,7 @@ class _$EmailExistsWithDifferentCredentialImpl
     TResult? Function(WrongPassword value)? wrongPassword,
     TResult? Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult? Function(WeakPassword value)? weakPassword,
+    TResult? Function(UnVerifiedEmail value)? unVerifiedEmail,
     TResult? Function(InvalidEmail value)? invalidEmail,
     TResult? Function(UserNotFound value)? userNotFound,
     TResult? Function(UserDisabled value)? userDisabled,
@@ -2149,6 +2409,7 @@ class _$EmailExistsWithDifferentCredentialImpl
     TResult Function(WrongPassword value)? wrongPassword,
     TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult Function(WeakPassword value)? weakPassword,
+    TResult Function(UnVerifiedEmail value)? unVerifiedEmail,
     TResult Function(InvalidEmail value)? invalidEmail,
     TResult Function(UserNotFound value)? userNotFound,
     TResult Function(UserDisabled value)? userDisabled,
@@ -2218,6 +2479,7 @@ class _$InvalidCredentialImpl implements InvalidCredential {
     required TResult Function() wrongPassword,
     required TResult Function() emailAlreadyInUse,
     required TResult Function() weakPassword,
+    required TResult Function() unVerifiedEmail,
     required TResult Function() invalidEmail,
     required TResult Function() userNotFound,
     required TResult Function() userDisabled,
@@ -2240,6 +2502,7 @@ class _$InvalidCredentialImpl implements InvalidCredential {
     TResult? Function()? wrongPassword,
     TResult? Function()? emailAlreadyInUse,
     TResult? Function()? weakPassword,
+    TResult? Function()? unVerifiedEmail,
     TResult? Function()? invalidEmail,
     TResult? Function()? userNotFound,
     TResult? Function()? userDisabled,
@@ -2262,6 +2525,7 @@ class _$InvalidCredentialImpl implements InvalidCredential {
     TResult Function()? wrongPassword,
     TResult Function()? emailAlreadyInUse,
     TResult Function()? weakPassword,
+    TResult Function()? unVerifiedEmail,
     TResult Function()? invalidEmail,
     TResult Function()? userNotFound,
     TResult Function()? userDisabled,
@@ -2288,6 +2552,7 @@ class _$InvalidCredentialImpl implements InvalidCredential {
     required TResult Function(WrongPassword value) wrongPassword,
     required TResult Function(EmailAlreadyInUse value) emailAlreadyInUse,
     required TResult Function(WeakPassword value) weakPassword,
+    required TResult Function(UnVerifiedEmail value) unVerifiedEmail,
     required TResult Function(InvalidEmail value) invalidEmail,
     required TResult Function(UserNotFound value) userNotFound,
     required TResult Function(UserDisabled value) userDisabled,
@@ -2311,6 +2576,7 @@ class _$InvalidCredentialImpl implements InvalidCredential {
     TResult? Function(WrongPassword value)? wrongPassword,
     TResult? Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult? Function(WeakPassword value)? weakPassword,
+    TResult? Function(UnVerifiedEmail value)? unVerifiedEmail,
     TResult? Function(InvalidEmail value)? invalidEmail,
     TResult? Function(UserNotFound value)? userNotFound,
     TResult? Function(UserDisabled value)? userDisabled,
@@ -2334,6 +2600,7 @@ class _$InvalidCredentialImpl implements InvalidCredential {
     TResult Function(WrongPassword value)? wrongPassword,
     TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult Function(WeakPassword value)? weakPassword,
+    TResult Function(UnVerifiedEmail value)? unVerifiedEmail,
     TResult Function(InvalidEmail value)? invalidEmail,
     TResult Function(UserNotFound value)? userNotFound,
     TResult Function(UserDisabled value)? userDisabled,
@@ -2401,6 +2668,7 @@ class _$ChannelErrorImpl implements ChannelError {
     required TResult Function() wrongPassword,
     required TResult Function() emailAlreadyInUse,
     required TResult Function() weakPassword,
+    required TResult Function() unVerifiedEmail,
     required TResult Function() invalidEmail,
     required TResult Function() userNotFound,
     required TResult Function() userDisabled,
@@ -2423,6 +2691,7 @@ class _$ChannelErrorImpl implements ChannelError {
     TResult? Function()? wrongPassword,
     TResult? Function()? emailAlreadyInUse,
     TResult? Function()? weakPassword,
+    TResult? Function()? unVerifiedEmail,
     TResult? Function()? invalidEmail,
     TResult? Function()? userNotFound,
     TResult? Function()? userDisabled,
@@ -2445,6 +2714,7 @@ class _$ChannelErrorImpl implements ChannelError {
     TResult Function()? wrongPassword,
     TResult Function()? emailAlreadyInUse,
     TResult Function()? weakPassword,
+    TResult Function()? unVerifiedEmail,
     TResult Function()? invalidEmail,
     TResult Function()? userNotFound,
     TResult Function()? userDisabled,
@@ -2471,6 +2741,7 @@ class _$ChannelErrorImpl implements ChannelError {
     required TResult Function(WrongPassword value) wrongPassword,
     required TResult Function(EmailAlreadyInUse value) emailAlreadyInUse,
     required TResult Function(WeakPassword value) weakPassword,
+    required TResult Function(UnVerifiedEmail value) unVerifiedEmail,
     required TResult Function(InvalidEmail value) invalidEmail,
     required TResult Function(UserNotFound value) userNotFound,
     required TResult Function(UserDisabled value) userDisabled,
@@ -2494,6 +2765,7 @@ class _$ChannelErrorImpl implements ChannelError {
     TResult? Function(WrongPassword value)? wrongPassword,
     TResult? Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult? Function(WeakPassword value)? weakPassword,
+    TResult? Function(UnVerifiedEmail value)? unVerifiedEmail,
     TResult? Function(InvalidEmail value)? invalidEmail,
     TResult? Function(UserNotFound value)? userNotFound,
     TResult? Function(UserDisabled value)? userDisabled,
@@ -2517,6 +2789,7 @@ class _$ChannelErrorImpl implements ChannelError {
     TResult Function(WrongPassword value)? wrongPassword,
     TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult Function(WeakPassword value)? weakPassword,
+    TResult Function(UnVerifiedEmail value)? unVerifiedEmail,
     TResult Function(InvalidEmail value)? invalidEmail,
     TResult Function(UserNotFound value)? userNotFound,
     TResult Function(UserDisabled value)? userDisabled,
@@ -2584,6 +2857,7 @@ class _$UndefinedImpl implements Undefined {
     required TResult Function() wrongPassword,
     required TResult Function() emailAlreadyInUse,
     required TResult Function() weakPassword,
+    required TResult Function() unVerifiedEmail,
     required TResult Function() invalidEmail,
     required TResult Function() userNotFound,
     required TResult Function() userDisabled,
@@ -2606,6 +2880,7 @@ class _$UndefinedImpl implements Undefined {
     TResult? Function()? wrongPassword,
     TResult? Function()? emailAlreadyInUse,
     TResult? Function()? weakPassword,
+    TResult? Function()? unVerifiedEmail,
     TResult? Function()? invalidEmail,
     TResult? Function()? userNotFound,
     TResult? Function()? userDisabled,
@@ -2628,6 +2903,7 @@ class _$UndefinedImpl implements Undefined {
     TResult Function()? wrongPassword,
     TResult Function()? emailAlreadyInUse,
     TResult Function()? weakPassword,
+    TResult Function()? unVerifiedEmail,
     TResult Function()? invalidEmail,
     TResult Function()? userNotFound,
     TResult Function()? userDisabled,
@@ -2654,6 +2930,7 @@ class _$UndefinedImpl implements Undefined {
     required TResult Function(WrongPassword value) wrongPassword,
     required TResult Function(EmailAlreadyInUse value) emailAlreadyInUse,
     required TResult Function(WeakPassword value) weakPassword,
+    required TResult Function(UnVerifiedEmail value) unVerifiedEmail,
     required TResult Function(InvalidEmail value) invalidEmail,
     required TResult Function(UserNotFound value) userNotFound,
     required TResult Function(UserDisabled value) userDisabled,
@@ -2677,6 +2954,7 @@ class _$UndefinedImpl implements Undefined {
     TResult? Function(WrongPassword value)? wrongPassword,
     TResult? Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult? Function(WeakPassword value)? weakPassword,
+    TResult? Function(UnVerifiedEmail value)? unVerifiedEmail,
     TResult? Function(InvalidEmail value)? invalidEmail,
     TResult? Function(UserNotFound value)? userNotFound,
     TResult? Function(UserDisabled value)? userDisabled,
@@ -2700,6 +2978,7 @@ class _$UndefinedImpl implements Undefined {
     TResult Function(WrongPassword value)? wrongPassword,
     TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult Function(WeakPassword value)? weakPassword,
+    TResult Function(UnVerifiedEmail value)? unVerifiedEmail,
     TResult Function(InvalidEmail value)? invalidEmail,
     TResult Function(UserNotFound value)? userNotFound,
     TResult Function(UserDisabled value)? userDisabled,
@@ -2768,6 +3047,7 @@ class _$NoInternetConnectionImpl implements NoInternetConnection {
     required TResult Function() wrongPassword,
     required TResult Function() emailAlreadyInUse,
     required TResult Function() weakPassword,
+    required TResult Function() unVerifiedEmail,
     required TResult Function() invalidEmail,
     required TResult Function() userNotFound,
     required TResult Function() userDisabled,
@@ -2790,6 +3070,7 @@ class _$NoInternetConnectionImpl implements NoInternetConnection {
     TResult? Function()? wrongPassword,
     TResult? Function()? emailAlreadyInUse,
     TResult? Function()? weakPassword,
+    TResult? Function()? unVerifiedEmail,
     TResult? Function()? invalidEmail,
     TResult? Function()? userNotFound,
     TResult? Function()? userDisabled,
@@ -2812,6 +3093,7 @@ class _$NoInternetConnectionImpl implements NoInternetConnection {
     TResult Function()? wrongPassword,
     TResult Function()? emailAlreadyInUse,
     TResult Function()? weakPassword,
+    TResult Function()? unVerifiedEmail,
     TResult Function()? invalidEmail,
     TResult Function()? userNotFound,
     TResult Function()? userDisabled,
@@ -2838,6 +3120,7 @@ class _$NoInternetConnectionImpl implements NoInternetConnection {
     required TResult Function(WrongPassword value) wrongPassword,
     required TResult Function(EmailAlreadyInUse value) emailAlreadyInUse,
     required TResult Function(WeakPassword value) weakPassword,
+    required TResult Function(UnVerifiedEmail value) unVerifiedEmail,
     required TResult Function(InvalidEmail value) invalidEmail,
     required TResult Function(UserNotFound value) userNotFound,
     required TResult Function(UserDisabled value) userDisabled,
@@ -2861,6 +3144,7 @@ class _$NoInternetConnectionImpl implements NoInternetConnection {
     TResult? Function(WrongPassword value)? wrongPassword,
     TResult? Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult? Function(WeakPassword value)? weakPassword,
+    TResult? Function(UnVerifiedEmail value)? unVerifiedEmail,
     TResult? Function(InvalidEmail value)? invalidEmail,
     TResult? Function(UserNotFound value)? userNotFound,
     TResult? Function(UserDisabled value)? userDisabled,
@@ -2884,6 +3168,7 @@ class _$NoInternetConnectionImpl implements NoInternetConnection {
     TResult Function(WrongPassword value)? wrongPassword,
     TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
     TResult Function(WeakPassword value)? weakPassword,
+    TResult Function(UnVerifiedEmail value)? unVerifiedEmail,
     TResult Function(InvalidEmail value)? invalidEmail,
     TResult Function(UserNotFound value)? userNotFound,
     TResult Function(UserDisabled value)? userDisabled,

@@ -15,6 +15,7 @@ import 'package:travelhub/features/home/presentation/screens/home_screen.dart';
 import 'package:travelhub/features/hotels/cubit/hotels_cubit.dart';
 import 'package:travelhub/features/maps/cubit/maps_cubit.dart';
 import 'package:travelhub/features/profile/cubit/profile_cubit.dart';
+import 'package:travelhub/map.dart';
 
 class Sp {
   static SharedPreferences? sp;
@@ -78,6 +79,7 @@ class MyApp extends StatelessWidget {
                       : const HomeScreen(),
               // const MapScreen(),
               // const LoginScreen(),
+              // const MapSample(),
             ),
           );
         });

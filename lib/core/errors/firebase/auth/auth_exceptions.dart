@@ -7,6 +7,7 @@ class AuthExceptionHandler with _$AuthExceptionHandler {
   const factory AuthExceptionHandler.wrongPassword() = WrongPassword;
   const factory AuthExceptionHandler.emailAlreadyInUse() = EmailAlreadyInUse;
   const factory AuthExceptionHandler.weakPassword() = WeakPassword;
+  const factory AuthExceptionHandler.unVerifiedEmail() = UnVerifiedEmail;
   const factory AuthExceptionHandler.invalidEmail() = InvalidEmail;
   const factory AuthExceptionHandler.userNotFound() = UserNotFound;
   const factory AuthExceptionHandler.userDisabled() = UserDisabled;
@@ -35,6 +36,9 @@ class AuthExceptionHandler with _$AuthExceptionHandler {
         break;
       case "weak-password":
         status = const AuthExceptionHandler.weakPassword();
+        break;
+      case "unverified-email":
+        status = const AuthExceptionHandler.unVerifiedEmail();
         break;
       case "user-not-found":
         status = const AuthExceptionHandler.userNotFound();
@@ -86,6 +90,8 @@ class AuthExceptionHandler with _$AuthExceptionHandler {
 
     authExceptionHandler.when(
       wrongPassword: () => errorMessage = "Your password is wrong.",
+      unVerifiedEmail: () => errorMessage =
+          "Un verified email, please verify your email first and try again.",
       emailAlreadyInUse: () => errorMessage =
           "The email has already been registered. Please login or reset your password.",
       weakPassword: () => errorMessage = "The password is weak.",

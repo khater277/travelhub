@@ -12,6 +12,7 @@ abstract class AuthRemoteDataSource {
   Future<CurrentUser> getCurrentUser({required String uid});
   Future<UserCredential?> signInWithGoogle();
   Future<UserCredential?> signInWithFacebook();
+  Future<void> resetPassword({required String email});
 }
 
 class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
@@ -55,5 +56,10 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
   @override
   Future<UserCredential?> signInWithFacebook() {
     return authViaFirebase.signInWithFacebook();
+  }
+
+  @override
+  Future<void> resetPassword({required String email}) {
+    return authViaFirebase.resetPassword(email: email);
   }
 }
