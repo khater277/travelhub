@@ -36,9 +36,22 @@ class LargeHeadText extends StatelessWidget {
 class SmallHeadText extends StatelessWidget {
   final String text;
   final double? size;
+  final bool center;
   final bool isEllipsis;
+  final bool isUnderLine;
+  final bool italic;
+  final int maxLines;
+  final Color? color;
   const SmallHeadText(
-      {super.key, required this.text, this.size, this.isEllipsis = true});
+      {super.key,
+      required this.text,
+      this.size,
+      this.center = false,
+      this.isEllipsis = true,
+      this.isUnderLine = false,
+      this.italic = false,
+      this.maxLines = 1,
+      this.color});
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +59,12 @@ class SmallHeadText extends StatelessWidget {
       text,
       style: Theme.of(context).textTheme.bodyMedium!.copyWith(
             fontSize: size ?? FontSize.s14,
+            color: color ?? Theme.of(context).textTheme.bodyLarge!.color,
+            decoration: isUnderLine ? TextDecoration.underline : null,
+            fontStyle: italic ? FontStyle.italic : FontStyle.normal,
           ),
+      textAlign: center ? TextAlign.center : null,
+      maxLines: maxLines,
       overflow: isEllipsis ? TextOverflow.ellipsis : null,
     );
   }

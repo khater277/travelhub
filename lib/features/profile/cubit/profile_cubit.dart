@@ -10,7 +10,9 @@ import 'package:travelhub/app/locator.dart';
 import 'package:travelhub/core/firebase/collections_keys.dart';
 import 'package:travelhub/core/local_storage/keys.dart';
 import 'package:travelhub/core/local_storage/user_storage.dart';
+import 'package:travelhub/features/hotels/domain/usecases/hotel_usecases.dart';
 import 'package:travelhub/features/profile/data/models/pofile_item_model.dart';
+import 'package:travelhub/features/profile/domain/usecases/delete_account_usecase.dart';
 import 'package:travelhub/features/profile/domain/usecases/re_auth_with_credential_use_case.dart';
 import 'package:travelhub/features/profile/domain/usecases/update_password_usecase.dart';
 import 'package:travelhub/features/profile/domain/usecases/update_profile_data_use_case.dart';
@@ -24,17 +26,20 @@ class ProfileCubit extends Cubit<ProfileState> {
   final UpdateProfileDataUseCase updateProfileDataUseCase;
   final UpdatePasswordUseCase updatePasswordUseCase;
   final ReAuthWithCredentialUseCase reAuthWithCredentialUseCase;
+  final DeleteAccountUsecase deleteAccountUsecase;
   ProfileCubit({
     required this.uploadFileUseCase,
     required this.updateProfileDataUseCase,
     required this.updatePasswordUseCase,
     required this.reAuthWithCredentialUseCase,
+    required this.deleteAccountUsecase,
   }) : super(const ProfileState.initial());
 
   List<ProfileItemModel> profileItemsData = [
     ProfileItemModel(name: "Change Password", icon: Icons.lock),
     ProfileItemModel(name: "Help Center", icon: Icons.info_rounded),
     ProfileItemModel(name: "Setting", icon: Icons.settings),
+    ProfileItemModel(name: "Delete Account", icon: Icons.delete),
   ];
 
   ImagePicker picker = ImagePicker();
@@ -191,6 +196,28 @@ class ProfileCubit extends Cubit<ProfileState> {
         newPasswordController!.clear();
         newPasswordConfirmationController!.clear();
         emit(const ProfileState.updatePassword());
+      },
+    );
+  }
+
+  void reAuthUserAndDeleteAccount({required String password}) async {
+    emit(const ProfileState.deleteAccountLoading());
+    final response = await reAuthWithCredentialUseCase.call(password);
+    response.fold(
+      (failure) => emit(ProfileState.deleteAccountError(failure.getMessage())),
+      (user) async {
+        final response = await deleteAccountUsecase.call(NoParams());
+        response.fold(
+          (failure) =>
+              emit(ProfileState.deleteAccountError(failure.getMessage())),
+          (result) {
+            locator<UserStorage>().delete(
+                id: locator<UserStorage>()
+                    .getData(id: HiveKeys.currentUser)!
+                    .uid!);
+            emit(const ProfileState.deleteAccount());
+          },
+        );
       },
     );
   }

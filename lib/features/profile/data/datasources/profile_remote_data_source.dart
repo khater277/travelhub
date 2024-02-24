@@ -16,6 +16,7 @@ abstract class ProfileRemoteDataSource {
   Future<void> updatePassword({required String newPassword});
   Future<UserCredential> reAuthWithCredential(
       {required String currentPassword});
+  Future<void> deleteAccount();
 }
 
 class ProfileRemoteDataSourceImpl implements ProfileRemoteDataSource {
@@ -52,5 +53,10 @@ class ProfileRemoteDataSourceImpl implements ProfileRemoteDataSource {
       {required String currentPassword}) {
     return authViaFirebase.reAuthWithCredential(
         currentPassword: currentPassword);
+  }
+
+  @override
+  Future<void> deleteAccount() {
+    return authViaFirebase.deleteAccount();
   }
 }

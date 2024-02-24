@@ -11,8 +11,10 @@ import 'package:travelhub/features/auth/cubit/login/login_cubit.dart';
 import 'package:travelhub/features/home/presentation/screens/home_screen.dart';
 
 class LoginButton extends StatelessWidget {
+  final bool reAuth;
   const LoginButton({
     super.key,
+    required this.reAuth,
   });
 
   @override
@@ -25,8 +27,11 @@ class LoginButton extends StatelessWidget {
             message: errorMsg,
             color: AppColors.red,
           ),
-          userLoginSuccess: () =>
-              Go.offAll(context: context, screen: const HomeScreen()),
+          userLoginSuccess: () => Go.offAll(
+              context: context,
+              screen: HomeScreen(
+                reAuth: reAuth,
+              )),
           orElse: () {},
         );
       },

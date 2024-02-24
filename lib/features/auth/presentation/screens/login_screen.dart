@@ -15,7 +15,8 @@ import 'package:travelhub/features/auth/presentation/widgets/login/login_button.
 import 'package:travelhub/features/auth/presentation/widgets/login/login_text_fields/login_text_fields.dart';
 
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+  final bool reAuth;
+  const LoginScreen({super.key, this.reAuth = false});
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
@@ -75,7 +76,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 SizedBox(height: AppHeight.h10),
-                const LoginButton(),
+                LoginButton(
+                  reAuth: widget.reAuth,
+                ),
                 SizedBox(height: AppHeight.h20),
                 const AcceptTermsText(),
                 const AlreadyHaveAnAccount()

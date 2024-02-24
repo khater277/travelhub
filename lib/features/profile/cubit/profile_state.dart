@@ -30,4 +30,8 @@ class ProfileState with _$ProfileState {
       _ChangeCurrentPasswordVisibility;
   const factory ProfileState.changeNewPasswordVisibility(bool visible) =
       _ChangeNewPasswordVisibility;
+  const factory ProfileState.deleteAccountLoading() = _DeleteAccountLoading;
+  const factory ProfileState.deleteAccount() = _DeleteAccount;
+  const factory ProfileState.deleteAccountError(String errorMsg) =
+      _DeleteAccountError;
 }

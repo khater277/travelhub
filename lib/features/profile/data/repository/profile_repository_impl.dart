@@ -98,4 +98,24 @@ class ProfileRepositoryImpl implements ProfileRepository {
           ServerFailure(error: error, type: NetworkErrorTypes.firestore));
     }
   }
+
+  @override
+  Future<Either<Failure, void>> deleteAccount() async {
+    if (await networkInfo.connected()) {
+      try {
+        final response = await profileRemoteDataSource.deleteAccount();
+        return Right(response);
+      } on FirebaseAuthException catch (error) {
+        return Left(ServerFailure(error: error, type: NetworkErrorTypes.auth));
+      } on FirebaseException catch (error) {
+        return Left(
+            ServerFailure(error: error, type: NetworkErrorTypes.firestore));
+      }
+    } else {
+      final error =
+          FirebaseException(plugin: '', code: 'no-internet-connection');
+      return Left(
+          ServerFailure(error: error, type: NetworkErrorTypes.firestore));
+    }
+  }
 }

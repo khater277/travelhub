@@ -58,6 +58,7 @@ import 'package:travelhub/features/profile/cubit/profile_cubit.dart';
 import 'package:travelhub/features/profile/data/datasources/profile_remote_data_source.dart';
 import 'package:travelhub/features/profile/data/repository/profile_repository_impl.dart';
 import 'package:travelhub/features/profile/domain/repository/profile_repository.dart';
+import 'package:travelhub/features/profile/domain/usecases/delete_account_usecase.dart';
 import 'package:travelhub/features/profile/domain/usecases/re_auth_with_credential_use_case.dart';
 import 'package:travelhub/features/profile/domain/usecases/update_password_usecase.dart';
 import 'package:travelhub/features/profile/domain/usecases/update_profile_data_use_case.dart';
@@ -107,6 +108,7 @@ Future<void> setupGetIt() async {
         updateProfileDataUseCase: locator(),
         updatePasswordUseCase: locator(),
         reAuthWithCredentialUseCase: locator(),
+        deleteAccountUsecase: locator(),
       ));
   locator.registerLazySingleton<MapsCubit>(
       () => MapsCubit(placesSuggestionUsecase: locator()));
@@ -205,6 +207,8 @@ Future<void> setupGetIt() async {
       () => ReAuthWithCredentialUseCase(profileRepository: locator()));
   locator.registerLazySingleton<ResetPasswordUsecase>(
       () => ResetPasswordUsecase(authRepository: locator()));
+  locator.registerLazySingleton<DeleteAccountUsecase>(
+      () => DeleteAccountUsecase(profileRepository: locator()));
 
   /// APIs
   locator.registerLazySingleton<BookingApi>(

@@ -15,4 +15,5 @@ abstract class ProfileRepository {
   Future<Either<Failure, void>> updatePassword({required String newPassword});
   Future<Either<Failure, UserCredential>> reAuthWithCredential(
       {required String currentPassword});
+  Future<Either<Failure, void>> deleteAccount();
 }

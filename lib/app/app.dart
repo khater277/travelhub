@@ -76,7 +76,7 @@ class MyApp extends StatelessWidget {
                   //         null
                   Sp.sp!.getBool('login') != true
                       ? const LoginScreen()
-                      : const HomeScreen(),
+                      : const HomeScreen(reAuth: false),
               // const MapScreen(),
               // const LoginScreen(),
               // const MapSample(),

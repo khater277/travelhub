@@ -37,6 +37,9 @@ mixin _$ProfileState {
     required TResult Function(String errorMsg) updatePasswordError,
     required TResult Function(bool visible) changeCurrentPasswordVisibility,
     required TResult Function(bool visible) changeNewPasswordVisibility,
+    required TResult Function() deleteAccountLoading,
+    required TResult Function() deleteAccount,
+    required TResult Function(String errorMsg) deleteAccountError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -60,6 +63,9 @@ mixin _$ProfileState {
     TResult? Function(String errorMsg)? updatePasswordError,
     TResult? Function(bool visible)? changeCurrentPasswordVisibility,
     TResult? Function(bool visible)? changeNewPasswordVisibility,
+    TResult? Function()? deleteAccountLoading,
+    TResult? Function()? deleteAccount,
+    TResult? Function(String errorMsg)? deleteAccountError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -83,6 +89,9 @@ mixin _$ProfileState {
     TResult Function(String errorMsg)? updatePasswordError,
     TResult Function(bool visible)? changeCurrentPasswordVisibility,
     TResult Function(bool visible)? changeNewPasswordVisibility,
+    TResult Function()? deleteAccountLoading,
+    TResult Function()? deleteAccount,
+    TResult Function(String errorMsg)? deleteAccountError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -116,6 +125,9 @@ mixin _$ProfileState {
         changeCurrentPasswordVisibility,
     required TResult Function(_ChangeNewPasswordVisibility value)
         changeNewPasswordVisibility,
+    required TResult Function(_DeleteAccountLoading value) deleteAccountLoading,
+    required TResult Function(_DeleteAccount value) deleteAccount,
+    required TResult Function(_DeleteAccountError value) deleteAccountError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -143,6 +155,9 @@ mixin _$ProfileState {
         changeCurrentPasswordVisibility,
     TResult? Function(_ChangeNewPasswordVisibility value)?
         changeNewPasswordVisibility,
+    TResult? Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult? Function(_DeleteAccount value)? deleteAccount,
+    TResult? Function(_DeleteAccountError value)? deleteAccountError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -170,6 +185,9 @@ mixin _$ProfileState {
         changeCurrentPasswordVisibility,
     TResult Function(_ChangeNewPasswordVisibility value)?
         changeNewPasswordVisibility,
+    TResult Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult Function(_DeleteAccount value)? deleteAccount,
+    TResult Function(_DeleteAccountError value)? deleteAccountError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -250,6 +268,9 @@ class _$InitialImpl implements _Initial {
     required TResult Function(String errorMsg) updatePasswordError,
     required TResult Function(bool visible) changeCurrentPasswordVisibility,
     required TResult Function(bool visible) changeNewPasswordVisibility,
+    required TResult Function() deleteAccountLoading,
+    required TResult Function() deleteAccount,
+    required TResult Function(String errorMsg) deleteAccountError,
   }) {
     return initial();
   }
@@ -276,6 +297,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function(String errorMsg)? updatePasswordError,
     TResult? Function(bool visible)? changeCurrentPasswordVisibility,
     TResult? Function(bool visible)? changeNewPasswordVisibility,
+    TResult? Function()? deleteAccountLoading,
+    TResult? Function()? deleteAccount,
+    TResult? Function(String errorMsg)? deleteAccountError,
   }) {
     return initial?.call();
   }
@@ -302,6 +326,9 @@ class _$InitialImpl implements _Initial {
     TResult Function(String errorMsg)? updatePasswordError,
     TResult Function(bool visible)? changeCurrentPasswordVisibility,
     TResult Function(bool visible)? changeNewPasswordVisibility,
+    TResult Function()? deleteAccountLoading,
+    TResult Function()? deleteAccount,
+    TResult Function(String errorMsg)? deleteAccountError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -341,6 +368,9 @@ class _$InitialImpl implements _Initial {
         changeCurrentPasswordVisibility,
     required TResult Function(_ChangeNewPasswordVisibility value)
         changeNewPasswordVisibility,
+    required TResult Function(_DeleteAccountLoading value) deleteAccountLoading,
+    required TResult Function(_DeleteAccount value) deleteAccount,
+    required TResult Function(_DeleteAccountError value) deleteAccountError,
   }) {
     return initial(this);
   }
@@ -371,6 +401,9 @@ class _$InitialImpl implements _Initial {
         changeCurrentPasswordVisibility,
     TResult? Function(_ChangeNewPasswordVisibility value)?
         changeNewPasswordVisibility,
+    TResult? Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult? Function(_DeleteAccount value)? deleteAccount,
+    TResult? Function(_DeleteAccountError value)? deleteAccountError,
   }) {
     return initial?.call(this);
   }
@@ -401,6 +434,9 @@ class _$InitialImpl implements _Initial {
         changeCurrentPasswordVisibility,
     TResult Function(_ChangeNewPasswordVisibility value)?
         changeNewPasswordVisibility,
+    TResult Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult Function(_DeleteAccount value)? deleteAccount,
+    TResult Function(_DeleteAccountError value)? deleteAccountError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -471,6 +507,9 @@ class _$DisposeEditProfileImpl implements _DisposeEditProfile {
     required TResult Function(String errorMsg) updatePasswordError,
     required TResult Function(bool visible) changeCurrentPasswordVisibility,
     required TResult Function(bool visible) changeNewPasswordVisibility,
+    required TResult Function() deleteAccountLoading,
+    required TResult Function() deleteAccount,
+    required TResult Function(String errorMsg) deleteAccountError,
   }) {
     return disposeEditProfile();
   }
@@ -497,6 +536,9 @@ class _$DisposeEditProfileImpl implements _DisposeEditProfile {
     TResult? Function(String errorMsg)? updatePasswordError,
     TResult? Function(bool visible)? changeCurrentPasswordVisibility,
     TResult? Function(bool visible)? changeNewPasswordVisibility,
+    TResult? Function()? deleteAccountLoading,
+    TResult? Function()? deleteAccount,
+    TResult? Function(String errorMsg)? deleteAccountError,
   }) {
     return disposeEditProfile?.call();
   }
@@ -523,6 +565,9 @@ class _$DisposeEditProfileImpl implements _DisposeEditProfile {
     TResult Function(String errorMsg)? updatePasswordError,
     TResult Function(bool visible)? changeCurrentPasswordVisibility,
     TResult Function(bool visible)? changeNewPasswordVisibility,
+    TResult Function()? deleteAccountLoading,
+    TResult Function()? deleteAccount,
+    TResult Function(String errorMsg)? deleteAccountError,
     required TResult orElse(),
   }) {
     if (disposeEditProfile != null) {
@@ -562,6 +607,9 @@ class _$DisposeEditProfileImpl implements _DisposeEditProfile {
         changeCurrentPasswordVisibility,
     required TResult Function(_ChangeNewPasswordVisibility value)
         changeNewPasswordVisibility,
+    required TResult Function(_DeleteAccountLoading value) deleteAccountLoading,
+    required TResult Function(_DeleteAccount value) deleteAccount,
+    required TResult Function(_DeleteAccountError value) deleteAccountError,
   }) {
     return disposeEditProfile(this);
   }
@@ -592,6 +640,9 @@ class _$DisposeEditProfileImpl implements _DisposeEditProfile {
         changeCurrentPasswordVisibility,
     TResult? Function(_ChangeNewPasswordVisibility value)?
         changeNewPasswordVisibility,
+    TResult? Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult? Function(_DeleteAccount value)? deleteAccount,
+    TResult? Function(_DeleteAccountError value)? deleteAccountError,
   }) {
     return disposeEditProfile?.call(this);
   }
@@ -622,6 +673,9 @@ class _$DisposeEditProfileImpl implements _DisposeEditProfile {
         changeCurrentPasswordVisibility,
     TResult Function(_ChangeNewPasswordVisibility value)?
         changeNewPasswordVisibility,
+    TResult Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult Function(_DeleteAccount value)? deleteAccount,
+    TResult Function(_DeleteAccountError value)? deleteAccountError,
     required TResult orElse(),
   }) {
     if (disposeEditProfile != null) {
@@ -692,6 +746,9 @@ class _$InitChangePasswordImpl implements _InitChangePassword {
     required TResult Function(String errorMsg) updatePasswordError,
     required TResult Function(bool visible) changeCurrentPasswordVisibility,
     required TResult Function(bool visible) changeNewPasswordVisibility,
+    required TResult Function() deleteAccountLoading,
+    required TResult Function() deleteAccount,
+    required TResult Function(String errorMsg) deleteAccountError,
   }) {
     return initChangePassword();
   }
@@ -718,6 +775,9 @@ class _$InitChangePasswordImpl implements _InitChangePassword {
     TResult? Function(String errorMsg)? updatePasswordError,
     TResult? Function(bool visible)? changeCurrentPasswordVisibility,
     TResult? Function(bool visible)? changeNewPasswordVisibility,
+    TResult? Function()? deleteAccountLoading,
+    TResult? Function()? deleteAccount,
+    TResult? Function(String errorMsg)? deleteAccountError,
   }) {
     return initChangePassword?.call();
   }
@@ -744,6 +804,9 @@ class _$InitChangePasswordImpl implements _InitChangePassword {
     TResult Function(String errorMsg)? updatePasswordError,
     TResult Function(bool visible)? changeCurrentPasswordVisibility,
     TResult Function(bool visible)? changeNewPasswordVisibility,
+    TResult Function()? deleteAccountLoading,
+    TResult Function()? deleteAccount,
+    TResult Function(String errorMsg)? deleteAccountError,
     required TResult orElse(),
   }) {
     if (initChangePassword != null) {
@@ -783,6 +846,9 @@ class _$InitChangePasswordImpl implements _InitChangePassword {
         changeCurrentPasswordVisibility,
     required TResult Function(_ChangeNewPasswordVisibility value)
         changeNewPasswordVisibility,
+    required TResult Function(_DeleteAccountLoading value) deleteAccountLoading,
+    required TResult Function(_DeleteAccount value) deleteAccount,
+    required TResult Function(_DeleteAccountError value) deleteAccountError,
   }) {
     return initChangePassword(this);
   }
@@ -813,6 +879,9 @@ class _$InitChangePasswordImpl implements _InitChangePassword {
         changeCurrentPasswordVisibility,
     TResult? Function(_ChangeNewPasswordVisibility value)?
         changeNewPasswordVisibility,
+    TResult? Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult? Function(_DeleteAccount value)? deleteAccount,
+    TResult? Function(_DeleteAccountError value)? deleteAccountError,
   }) {
     return initChangePassword?.call(this);
   }
@@ -843,6 +912,9 @@ class _$InitChangePasswordImpl implements _InitChangePassword {
         changeCurrentPasswordVisibility,
     TResult Function(_ChangeNewPasswordVisibility value)?
         changeNewPasswordVisibility,
+    TResult Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult Function(_DeleteAccount value)? deleteAccount,
+    TResult Function(_DeleteAccountError value)? deleteAccountError,
     required TResult orElse(),
   }) {
     if (initChangePassword != null) {
@@ -915,6 +987,9 @@ class _$DisposeChangePasswordImpl implements _DisposeChangePassword {
     required TResult Function(String errorMsg) updatePasswordError,
     required TResult Function(bool visible) changeCurrentPasswordVisibility,
     required TResult Function(bool visible) changeNewPasswordVisibility,
+    required TResult Function() deleteAccountLoading,
+    required TResult Function() deleteAccount,
+    required TResult Function(String errorMsg) deleteAccountError,
   }) {
     return disposeChangePassword();
   }
@@ -941,6 +1016,9 @@ class _$DisposeChangePasswordImpl implements _DisposeChangePassword {
     TResult? Function(String errorMsg)? updatePasswordError,
     TResult? Function(bool visible)? changeCurrentPasswordVisibility,
     TResult? Function(bool visible)? changeNewPasswordVisibility,
+    TResult? Function()? deleteAccountLoading,
+    TResult? Function()? deleteAccount,
+    TResult? Function(String errorMsg)? deleteAccountError,
   }) {
     return disposeChangePassword?.call();
   }
@@ -967,6 +1045,9 @@ class _$DisposeChangePasswordImpl implements _DisposeChangePassword {
     TResult Function(String errorMsg)? updatePasswordError,
     TResult Function(bool visible)? changeCurrentPasswordVisibility,
     TResult Function(bool visible)? changeNewPasswordVisibility,
+    TResult Function()? deleteAccountLoading,
+    TResult Function()? deleteAccount,
+    TResult Function(String errorMsg)? deleteAccountError,
     required TResult orElse(),
   }) {
     if (disposeChangePassword != null) {
@@ -1006,6 +1087,9 @@ class _$DisposeChangePasswordImpl implements _DisposeChangePassword {
         changeCurrentPasswordVisibility,
     required TResult Function(_ChangeNewPasswordVisibility value)
         changeNewPasswordVisibility,
+    required TResult Function(_DeleteAccountLoading value) deleteAccountLoading,
+    required TResult Function(_DeleteAccount value) deleteAccount,
+    required TResult Function(_DeleteAccountError value) deleteAccountError,
   }) {
     return disposeChangePassword(this);
   }
@@ -1036,6 +1120,9 @@ class _$DisposeChangePasswordImpl implements _DisposeChangePassword {
         changeCurrentPasswordVisibility,
     TResult? Function(_ChangeNewPasswordVisibility value)?
         changeNewPasswordVisibility,
+    TResult? Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult? Function(_DeleteAccount value)? deleteAccount,
+    TResult? Function(_DeleteAccountError value)? deleteAccountError,
   }) {
     return disposeChangePassword?.call(this);
   }
@@ -1066,6 +1153,9 @@ class _$DisposeChangePasswordImpl implements _DisposeChangePassword {
         changeCurrentPasswordVisibility,
     TResult Function(_ChangeNewPasswordVisibility value)?
         changeNewPasswordVisibility,
+    TResult Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult Function(_DeleteAccount value)? deleteAccount,
+    TResult Function(_DeleteAccountError value)? deleteAccountError,
     required TResult orElse(),
   }) {
     if (disposeChangePassword != null) {
@@ -1139,6 +1229,9 @@ class _$pickProfileImageLoadingImpl implements _pickProfileImageLoading {
     required TResult Function(String errorMsg) updatePasswordError,
     required TResult Function(bool visible) changeCurrentPasswordVisibility,
     required TResult Function(bool visible) changeNewPasswordVisibility,
+    required TResult Function() deleteAccountLoading,
+    required TResult Function() deleteAccount,
+    required TResult Function(String errorMsg) deleteAccountError,
   }) {
     return pickProfileImageLoading();
   }
@@ -1165,6 +1258,9 @@ class _$pickProfileImageLoadingImpl implements _pickProfileImageLoading {
     TResult? Function(String errorMsg)? updatePasswordError,
     TResult? Function(bool visible)? changeCurrentPasswordVisibility,
     TResult? Function(bool visible)? changeNewPasswordVisibility,
+    TResult? Function()? deleteAccountLoading,
+    TResult? Function()? deleteAccount,
+    TResult? Function(String errorMsg)? deleteAccountError,
   }) {
     return pickProfileImageLoading?.call();
   }
@@ -1191,6 +1287,9 @@ class _$pickProfileImageLoadingImpl implements _pickProfileImageLoading {
     TResult Function(String errorMsg)? updatePasswordError,
     TResult Function(bool visible)? changeCurrentPasswordVisibility,
     TResult Function(bool visible)? changeNewPasswordVisibility,
+    TResult Function()? deleteAccountLoading,
+    TResult Function()? deleteAccount,
+    TResult Function(String errorMsg)? deleteAccountError,
     required TResult orElse(),
   }) {
     if (pickProfileImageLoading != null) {
@@ -1230,6 +1329,9 @@ class _$pickProfileImageLoadingImpl implements _pickProfileImageLoading {
         changeCurrentPasswordVisibility,
     required TResult Function(_ChangeNewPasswordVisibility value)
         changeNewPasswordVisibility,
+    required TResult Function(_DeleteAccountLoading value) deleteAccountLoading,
+    required TResult Function(_DeleteAccount value) deleteAccount,
+    required TResult Function(_DeleteAccountError value) deleteAccountError,
   }) {
     return pickProfileImageLoading(this);
   }
@@ -1260,6 +1362,9 @@ class _$pickProfileImageLoadingImpl implements _pickProfileImageLoading {
         changeCurrentPasswordVisibility,
     TResult? Function(_ChangeNewPasswordVisibility value)?
         changeNewPasswordVisibility,
+    TResult? Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult? Function(_DeleteAccount value)? deleteAccount,
+    TResult? Function(_DeleteAccountError value)? deleteAccountError,
   }) {
     return pickProfileImageLoading?.call(this);
   }
@@ -1290,6 +1395,9 @@ class _$pickProfileImageLoadingImpl implements _pickProfileImageLoading {
         changeCurrentPasswordVisibility,
     TResult Function(_ChangeNewPasswordVisibility value)?
         changeNewPasswordVisibility,
+    TResult Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult Function(_DeleteAccount value)? deleteAccount,
+    TResult Function(_DeleteAccountError value)? deleteAccountError,
     required TResult orElse(),
   }) {
     if (pickProfileImageLoading != null) {
@@ -1360,6 +1468,9 @@ class _$pickProfileImageImpl implements _pickProfileImage {
     required TResult Function(String errorMsg) updatePasswordError,
     required TResult Function(bool visible) changeCurrentPasswordVisibility,
     required TResult Function(bool visible) changeNewPasswordVisibility,
+    required TResult Function() deleteAccountLoading,
+    required TResult Function() deleteAccount,
+    required TResult Function(String errorMsg) deleteAccountError,
   }) {
     return pickProfileImage();
   }
@@ -1386,6 +1497,9 @@ class _$pickProfileImageImpl implements _pickProfileImage {
     TResult? Function(String errorMsg)? updatePasswordError,
     TResult? Function(bool visible)? changeCurrentPasswordVisibility,
     TResult? Function(bool visible)? changeNewPasswordVisibility,
+    TResult? Function()? deleteAccountLoading,
+    TResult? Function()? deleteAccount,
+    TResult? Function(String errorMsg)? deleteAccountError,
   }) {
     return pickProfileImage?.call();
   }
@@ -1412,6 +1526,9 @@ class _$pickProfileImageImpl implements _pickProfileImage {
     TResult Function(String errorMsg)? updatePasswordError,
     TResult Function(bool visible)? changeCurrentPasswordVisibility,
     TResult Function(bool visible)? changeNewPasswordVisibility,
+    TResult Function()? deleteAccountLoading,
+    TResult Function()? deleteAccount,
+    TResult Function(String errorMsg)? deleteAccountError,
     required TResult orElse(),
   }) {
     if (pickProfileImage != null) {
@@ -1451,6 +1568,9 @@ class _$pickProfileImageImpl implements _pickProfileImage {
         changeCurrentPasswordVisibility,
     required TResult Function(_ChangeNewPasswordVisibility value)
         changeNewPasswordVisibility,
+    required TResult Function(_DeleteAccountLoading value) deleteAccountLoading,
+    required TResult Function(_DeleteAccount value) deleteAccount,
+    required TResult Function(_DeleteAccountError value) deleteAccountError,
   }) {
     return pickProfileImage(this);
   }
@@ -1481,6 +1601,9 @@ class _$pickProfileImageImpl implements _pickProfileImage {
         changeCurrentPasswordVisibility,
     TResult? Function(_ChangeNewPasswordVisibility value)?
         changeNewPasswordVisibility,
+    TResult? Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult? Function(_DeleteAccount value)? deleteAccount,
+    TResult? Function(_DeleteAccountError value)? deleteAccountError,
   }) {
     return pickProfileImage?.call(this);
   }
@@ -1511,6 +1634,9 @@ class _$pickProfileImageImpl implements _pickProfileImage {
         changeCurrentPasswordVisibility,
     TResult Function(_ChangeNewPasswordVisibility value)?
         changeNewPasswordVisibility,
+    TResult Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult Function(_DeleteAccount value)? deleteAccount,
+    TResult Function(_DeleteAccountError value)? deleteAccountError,
     required TResult orElse(),
   }) {
     if (pickProfileImage != null) {
@@ -1610,6 +1736,9 @@ class _$pickProfileImageErrorImpl implements _pickProfileImageError {
     required TResult Function(String errorMsg) updatePasswordError,
     required TResult Function(bool visible) changeCurrentPasswordVisibility,
     required TResult Function(bool visible) changeNewPasswordVisibility,
+    required TResult Function() deleteAccountLoading,
+    required TResult Function() deleteAccount,
+    required TResult Function(String errorMsg) deleteAccountError,
   }) {
     return pickProfileImageError(errorMsg);
   }
@@ -1636,6 +1765,9 @@ class _$pickProfileImageErrorImpl implements _pickProfileImageError {
     TResult? Function(String errorMsg)? updatePasswordError,
     TResult? Function(bool visible)? changeCurrentPasswordVisibility,
     TResult? Function(bool visible)? changeNewPasswordVisibility,
+    TResult? Function()? deleteAccountLoading,
+    TResult? Function()? deleteAccount,
+    TResult? Function(String errorMsg)? deleteAccountError,
   }) {
     return pickProfileImageError?.call(errorMsg);
   }
@@ -1662,6 +1794,9 @@ class _$pickProfileImageErrorImpl implements _pickProfileImageError {
     TResult Function(String errorMsg)? updatePasswordError,
     TResult Function(bool visible)? changeCurrentPasswordVisibility,
     TResult Function(bool visible)? changeNewPasswordVisibility,
+    TResult Function()? deleteAccountLoading,
+    TResult Function()? deleteAccount,
+    TResult Function(String errorMsg)? deleteAccountError,
     required TResult orElse(),
   }) {
     if (pickProfileImageError != null) {
@@ -1701,6 +1836,9 @@ class _$pickProfileImageErrorImpl implements _pickProfileImageError {
         changeCurrentPasswordVisibility,
     required TResult Function(_ChangeNewPasswordVisibility value)
         changeNewPasswordVisibility,
+    required TResult Function(_DeleteAccountLoading value) deleteAccountLoading,
+    required TResult Function(_DeleteAccount value) deleteAccount,
+    required TResult Function(_DeleteAccountError value) deleteAccountError,
   }) {
     return pickProfileImageError(this);
   }
@@ -1731,6 +1869,9 @@ class _$pickProfileImageErrorImpl implements _pickProfileImageError {
         changeCurrentPasswordVisibility,
     TResult? Function(_ChangeNewPasswordVisibility value)?
         changeNewPasswordVisibility,
+    TResult? Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult? Function(_DeleteAccount value)? deleteAccount,
+    TResult? Function(_DeleteAccountError value)? deleteAccountError,
   }) {
     return pickProfileImageError?.call(this);
   }
@@ -1761,6 +1902,9 @@ class _$pickProfileImageErrorImpl implements _pickProfileImageError {
         changeCurrentPasswordVisibility,
     TResult Function(_ChangeNewPasswordVisibility value)?
         changeNewPasswordVisibility,
+    TResult Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult Function(_DeleteAccount value)? deleteAccount,
+    TResult Function(_DeleteAccountError value)? deleteAccountError,
     required TResult orElse(),
   }) {
     if (pickProfileImageError != null) {
@@ -1867,6 +2011,9 @@ class _$GetProfileImagePercentageImpl implements _GetProfileImagePercentage {
     required TResult Function(String errorMsg) updatePasswordError,
     required TResult Function(bool visible) changeCurrentPasswordVisibility,
     required TResult Function(bool visible) changeNewPasswordVisibility,
+    required TResult Function() deleteAccountLoading,
+    required TResult Function() deleteAccount,
+    required TResult Function(String errorMsg) deleteAccountError,
   }) {
     return getProfileImagePercentage(percentage);
   }
@@ -1893,6 +2040,9 @@ class _$GetProfileImagePercentageImpl implements _GetProfileImagePercentage {
     TResult? Function(String errorMsg)? updatePasswordError,
     TResult? Function(bool visible)? changeCurrentPasswordVisibility,
     TResult? Function(bool visible)? changeNewPasswordVisibility,
+    TResult? Function()? deleteAccountLoading,
+    TResult? Function()? deleteAccount,
+    TResult? Function(String errorMsg)? deleteAccountError,
   }) {
     return getProfileImagePercentage?.call(percentage);
   }
@@ -1919,6 +2069,9 @@ class _$GetProfileImagePercentageImpl implements _GetProfileImagePercentage {
     TResult Function(String errorMsg)? updatePasswordError,
     TResult Function(bool visible)? changeCurrentPasswordVisibility,
     TResult Function(bool visible)? changeNewPasswordVisibility,
+    TResult Function()? deleteAccountLoading,
+    TResult Function()? deleteAccount,
+    TResult Function(String errorMsg)? deleteAccountError,
     required TResult orElse(),
   }) {
     if (getProfileImagePercentage != null) {
@@ -1958,6 +2111,9 @@ class _$GetProfileImagePercentageImpl implements _GetProfileImagePercentage {
         changeCurrentPasswordVisibility,
     required TResult Function(_ChangeNewPasswordVisibility value)
         changeNewPasswordVisibility,
+    required TResult Function(_DeleteAccountLoading value) deleteAccountLoading,
+    required TResult Function(_DeleteAccount value) deleteAccount,
+    required TResult Function(_DeleteAccountError value) deleteAccountError,
   }) {
     return getProfileImagePercentage(this);
   }
@@ -1988,6 +2144,9 @@ class _$GetProfileImagePercentageImpl implements _GetProfileImagePercentage {
         changeCurrentPasswordVisibility,
     TResult? Function(_ChangeNewPasswordVisibility value)?
         changeNewPasswordVisibility,
+    TResult? Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult? Function(_DeleteAccount value)? deleteAccount,
+    TResult? Function(_DeleteAccountError value)? deleteAccountError,
   }) {
     return getProfileImagePercentage?.call(this);
   }
@@ -2018,6 +2177,9 @@ class _$GetProfileImagePercentageImpl implements _GetProfileImagePercentage {
         changeCurrentPasswordVisibility,
     TResult Function(_ChangeNewPasswordVisibility value)?
         changeNewPasswordVisibility,
+    TResult Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult Function(_DeleteAccount value)? deleteAccount,
+    TResult Function(_DeleteAccountError value)? deleteAccountError,
     required TResult orElse(),
   }) {
     if (getProfileImagePercentage != null) {
@@ -2097,6 +2259,9 @@ class _$UpdateProfileImageLoadingImpl implements _UpdateProfileImageLoading {
     required TResult Function(String errorMsg) updatePasswordError,
     required TResult Function(bool visible) changeCurrentPasswordVisibility,
     required TResult Function(bool visible) changeNewPasswordVisibility,
+    required TResult Function() deleteAccountLoading,
+    required TResult Function() deleteAccount,
+    required TResult Function(String errorMsg) deleteAccountError,
   }) {
     return updateProfileImageLoading();
   }
@@ -2123,6 +2288,9 @@ class _$UpdateProfileImageLoadingImpl implements _UpdateProfileImageLoading {
     TResult? Function(String errorMsg)? updatePasswordError,
     TResult? Function(bool visible)? changeCurrentPasswordVisibility,
     TResult? Function(bool visible)? changeNewPasswordVisibility,
+    TResult? Function()? deleteAccountLoading,
+    TResult? Function()? deleteAccount,
+    TResult? Function(String errorMsg)? deleteAccountError,
   }) {
     return updateProfileImageLoading?.call();
   }
@@ -2149,6 +2317,9 @@ class _$UpdateProfileImageLoadingImpl implements _UpdateProfileImageLoading {
     TResult Function(String errorMsg)? updatePasswordError,
     TResult Function(bool visible)? changeCurrentPasswordVisibility,
     TResult Function(bool visible)? changeNewPasswordVisibility,
+    TResult Function()? deleteAccountLoading,
+    TResult Function()? deleteAccount,
+    TResult Function(String errorMsg)? deleteAccountError,
     required TResult orElse(),
   }) {
     if (updateProfileImageLoading != null) {
@@ -2188,6 +2359,9 @@ class _$UpdateProfileImageLoadingImpl implements _UpdateProfileImageLoading {
         changeCurrentPasswordVisibility,
     required TResult Function(_ChangeNewPasswordVisibility value)
         changeNewPasswordVisibility,
+    required TResult Function(_DeleteAccountLoading value) deleteAccountLoading,
+    required TResult Function(_DeleteAccount value) deleteAccount,
+    required TResult Function(_DeleteAccountError value) deleteAccountError,
   }) {
     return updateProfileImageLoading(this);
   }
@@ -2218,6 +2392,9 @@ class _$UpdateProfileImageLoadingImpl implements _UpdateProfileImageLoading {
         changeCurrentPasswordVisibility,
     TResult? Function(_ChangeNewPasswordVisibility value)?
         changeNewPasswordVisibility,
+    TResult? Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult? Function(_DeleteAccount value)? deleteAccount,
+    TResult? Function(_DeleteAccountError value)? deleteAccountError,
   }) {
     return updateProfileImageLoading?.call(this);
   }
@@ -2248,6 +2425,9 @@ class _$UpdateProfileImageLoadingImpl implements _UpdateProfileImageLoading {
         changeCurrentPasswordVisibility,
     TResult Function(_ChangeNewPasswordVisibility value)?
         changeNewPasswordVisibility,
+    TResult Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult Function(_DeleteAccount value)? deleteAccount,
+    TResult Function(_DeleteAccountError value)? deleteAccountError,
     required TResult orElse(),
   }) {
     if (updateProfileImageLoading != null) {
@@ -2318,6 +2498,9 @@ class _$UpdateProfileImageImpl implements _UpdateProfileImage {
     required TResult Function(String errorMsg) updatePasswordError,
     required TResult Function(bool visible) changeCurrentPasswordVisibility,
     required TResult Function(bool visible) changeNewPasswordVisibility,
+    required TResult Function() deleteAccountLoading,
+    required TResult Function() deleteAccount,
+    required TResult Function(String errorMsg) deleteAccountError,
   }) {
     return updateProfileImage();
   }
@@ -2344,6 +2527,9 @@ class _$UpdateProfileImageImpl implements _UpdateProfileImage {
     TResult? Function(String errorMsg)? updatePasswordError,
     TResult? Function(bool visible)? changeCurrentPasswordVisibility,
     TResult? Function(bool visible)? changeNewPasswordVisibility,
+    TResult? Function()? deleteAccountLoading,
+    TResult? Function()? deleteAccount,
+    TResult? Function(String errorMsg)? deleteAccountError,
   }) {
     return updateProfileImage?.call();
   }
@@ -2370,6 +2556,9 @@ class _$UpdateProfileImageImpl implements _UpdateProfileImage {
     TResult Function(String errorMsg)? updatePasswordError,
     TResult Function(bool visible)? changeCurrentPasswordVisibility,
     TResult Function(bool visible)? changeNewPasswordVisibility,
+    TResult Function()? deleteAccountLoading,
+    TResult Function()? deleteAccount,
+    TResult Function(String errorMsg)? deleteAccountError,
     required TResult orElse(),
   }) {
     if (updateProfileImage != null) {
@@ -2409,6 +2598,9 @@ class _$UpdateProfileImageImpl implements _UpdateProfileImage {
         changeCurrentPasswordVisibility,
     required TResult Function(_ChangeNewPasswordVisibility value)
         changeNewPasswordVisibility,
+    required TResult Function(_DeleteAccountLoading value) deleteAccountLoading,
+    required TResult Function(_DeleteAccount value) deleteAccount,
+    required TResult Function(_DeleteAccountError value) deleteAccountError,
   }) {
     return updateProfileImage(this);
   }
@@ -2439,6 +2631,9 @@ class _$UpdateProfileImageImpl implements _UpdateProfileImage {
         changeCurrentPasswordVisibility,
     TResult? Function(_ChangeNewPasswordVisibility value)?
         changeNewPasswordVisibility,
+    TResult? Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult? Function(_DeleteAccount value)? deleteAccount,
+    TResult? Function(_DeleteAccountError value)? deleteAccountError,
   }) {
     return updateProfileImage?.call(this);
   }
@@ -2469,6 +2664,9 @@ class _$UpdateProfileImageImpl implements _UpdateProfileImage {
         changeCurrentPasswordVisibility,
     TResult Function(_ChangeNewPasswordVisibility value)?
         changeNewPasswordVisibility,
+    TResult Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult Function(_DeleteAccount value)? deleteAccount,
+    TResult Function(_DeleteAccountError value)? deleteAccountError,
     required TResult orElse(),
   }) {
     if (updateProfileImage != null) {
@@ -2569,6 +2767,9 @@ class _$UpdateProfileImageErrorImpl implements _UpdateProfileImageError {
     required TResult Function(String errorMsg) updatePasswordError,
     required TResult Function(bool visible) changeCurrentPasswordVisibility,
     required TResult Function(bool visible) changeNewPasswordVisibility,
+    required TResult Function() deleteAccountLoading,
+    required TResult Function() deleteAccount,
+    required TResult Function(String errorMsg) deleteAccountError,
   }) {
     return updateProfileImageError(errorMsg);
   }
@@ -2595,6 +2796,9 @@ class _$UpdateProfileImageErrorImpl implements _UpdateProfileImageError {
     TResult? Function(String errorMsg)? updatePasswordError,
     TResult? Function(bool visible)? changeCurrentPasswordVisibility,
     TResult? Function(bool visible)? changeNewPasswordVisibility,
+    TResult? Function()? deleteAccountLoading,
+    TResult? Function()? deleteAccount,
+    TResult? Function(String errorMsg)? deleteAccountError,
   }) {
     return updateProfileImageError?.call(errorMsg);
   }
@@ -2621,6 +2825,9 @@ class _$UpdateProfileImageErrorImpl implements _UpdateProfileImageError {
     TResult Function(String errorMsg)? updatePasswordError,
     TResult Function(bool visible)? changeCurrentPasswordVisibility,
     TResult Function(bool visible)? changeNewPasswordVisibility,
+    TResult Function()? deleteAccountLoading,
+    TResult Function()? deleteAccount,
+    TResult Function(String errorMsg)? deleteAccountError,
     required TResult orElse(),
   }) {
     if (updateProfileImageError != null) {
@@ -2660,6 +2867,9 @@ class _$UpdateProfileImageErrorImpl implements _UpdateProfileImageError {
         changeCurrentPasswordVisibility,
     required TResult Function(_ChangeNewPasswordVisibility value)
         changeNewPasswordVisibility,
+    required TResult Function(_DeleteAccountLoading value) deleteAccountLoading,
+    required TResult Function(_DeleteAccount value) deleteAccount,
+    required TResult Function(_DeleteAccountError value) deleteAccountError,
   }) {
     return updateProfileImageError(this);
   }
@@ -2690,6 +2900,9 @@ class _$UpdateProfileImageErrorImpl implements _UpdateProfileImageError {
         changeCurrentPasswordVisibility,
     TResult? Function(_ChangeNewPasswordVisibility value)?
         changeNewPasswordVisibility,
+    TResult? Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult? Function(_DeleteAccount value)? deleteAccount,
+    TResult? Function(_DeleteAccountError value)? deleteAccountError,
   }) {
     return updateProfileImageError?.call(this);
   }
@@ -2720,6 +2933,9 @@ class _$UpdateProfileImageErrorImpl implements _UpdateProfileImageError {
         changeCurrentPasswordVisibility,
     TResult Function(_ChangeNewPasswordVisibility value)?
         changeNewPasswordVisibility,
+    TResult Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult Function(_DeleteAccount value)? deleteAccount,
+    TResult Function(_DeleteAccountError value)? deleteAccountError,
     required TResult orElse(),
   }) {
     if (updateProfileImageError != null) {
@@ -2797,6 +3013,9 @@ class _$UpdateMyNameLoadingImpl implements _UpdateMyNameLoading {
     required TResult Function(String errorMsg) updatePasswordError,
     required TResult Function(bool visible) changeCurrentPasswordVisibility,
     required TResult Function(bool visible) changeNewPasswordVisibility,
+    required TResult Function() deleteAccountLoading,
+    required TResult Function() deleteAccount,
+    required TResult Function(String errorMsg) deleteAccountError,
   }) {
     return updateMyNameLoading();
   }
@@ -2823,6 +3042,9 @@ class _$UpdateMyNameLoadingImpl implements _UpdateMyNameLoading {
     TResult? Function(String errorMsg)? updatePasswordError,
     TResult? Function(bool visible)? changeCurrentPasswordVisibility,
     TResult? Function(bool visible)? changeNewPasswordVisibility,
+    TResult? Function()? deleteAccountLoading,
+    TResult? Function()? deleteAccount,
+    TResult? Function(String errorMsg)? deleteAccountError,
   }) {
     return updateMyNameLoading?.call();
   }
@@ -2849,6 +3071,9 @@ class _$UpdateMyNameLoadingImpl implements _UpdateMyNameLoading {
     TResult Function(String errorMsg)? updatePasswordError,
     TResult Function(bool visible)? changeCurrentPasswordVisibility,
     TResult Function(bool visible)? changeNewPasswordVisibility,
+    TResult Function()? deleteAccountLoading,
+    TResult Function()? deleteAccount,
+    TResult Function(String errorMsg)? deleteAccountError,
     required TResult orElse(),
   }) {
     if (updateMyNameLoading != null) {
@@ -2888,6 +3113,9 @@ class _$UpdateMyNameLoadingImpl implements _UpdateMyNameLoading {
         changeCurrentPasswordVisibility,
     required TResult Function(_ChangeNewPasswordVisibility value)
         changeNewPasswordVisibility,
+    required TResult Function(_DeleteAccountLoading value) deleteAccountLoading,
+    required TResult Function(_DeleteAccount value) deleteAccount,
+    required TResult Function(_DeleteAccountError value) deleteAccountError,
   }) {
     return updateMyNameLoading(this);
   }
@@ -2918,6 +3146,9 @@ class _$UpdateMyNameLoadingImpl implements _UpdateMyNameLoading {
         changeCurrentPasswordVisibility,
     TResult? Function(_ChangeNewPasswordVisibility value)?
         changeNewPasswordVisibility,
+    TResult? Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult? Function(_DeleteAccount value)? deleteAccount,
+    TResult? Function(_DeleteAccountError value)? deleteAccountError,
   }) {
     return updateMyNameLoading?.call(this);
   }
@@ -2948,6 +3179,9 @@ class _$UpdateMyNameLoadingImpl implements _UpdateMyNameLoading {
         changeCurrentPasswordVisibility,
     TResult Function(_ChangeNewPasswordVisibility value)?
         changeNewPasswordVisibility,
+    TResult Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult Function(_DeleteAccount value)? deleteAccount,
+    TResult Function(_DeleteAccountError value)? deleteAccountError,
     required TResult orElse(),
   }) {
     if (updateMyNameLoading != null) {
@@ -3018,6 +3252,9 @@ class _$UpdateMyNameImpl implements _UpdateMyName {
     required TResult Function(String errorMsg) updatePasswordError,
     required TResult Function(bool visible) changeCurrentPasswordVisibility,
     required TResult Function(bool visible) changeNewPasswordVisibility,
+    required TResult Function() deleteAccountLoading,
+    required TResult Function() deleteAccount,
+    required TResult Function(String errorMsg) deleteAccountError,
   }) {
     return updateMyName();
   }
@@ -3044,6 +3281,9 @@ class _$UpdateMyNameImpl implements _UpdateMyName {
     TResult? Function(String errorMsg)? updatePasswordError,
     TResult? Function(bool visible)? changeCurrentPasswordVisibility,
     TResult? Function(bool visible)? changeNewPasswordVisibility,
+    TResult? Function()? deleteAccountLoading,
+    TResult? Function()? deleteAccount,
+    TResult? Function(String errorMsg)? deleteAccountError,
   }) {
     return updateMyName?.call();
   }
@@ -3070,6 +3310,9 @@ class _$UpdateMyNameImpl implements _UpdateMyName {
     TResult Function(String errorMsg)? updatePasswordError,
     TResult Function(bool visible)? changeCurrentPasswordVisibility,
     TResult Function(bool visible)? changeNewPasswordVisibility,
+    TResult Function()? deleteAccountLoading,
+    TResult Function()? deleteAccount,
+    TResult Function(String errorMsg)? deleteAccountError,
     required TResult orElse(),
   }) {
     if (updateMyName != null) {
@@ -3109,6 +3352,9 @@ class _$UpdateMyNameImpl implements _UpdateMyName {
         changeCurrentPasswordVisibility,
     required TResult Function(_ChangeNewPasswordVisibility value)
         changeNewPasswordVisibility,
+    required TResult Function(_DeleteAccountLoading value) deleteAccountLoading,
+    required TResult Function(_DeleteAccount value) deleteAccount,
+    required TResult Function(_DeleteAccountError value) deleteAccountError,
   }) {
     return updateMyName(this);
   }
@@ -3139,6 +3385,9 @@ class _$UpdateMyNameImpl implements _UpdateMyName {
         changeCurrentPasswordVisibility,
     TResult? Function(_ChangeNewPasswordVisibility value)?
         changeNewPasswordVisibility,
+    TResult? Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult? Function(_DeleteAccount value)? deleteAccount,
+    TResult? Function(_DeleteAccountError value)? deleteAccountError,
   }) {
     return updateMyName?.call(this);
   }
@@ -3169,6 +3418,9 @@ class _$UpdateMyNameImpl implements _UpdateMyName {
         changeCurrentPasswordVisibility,
     TResult Function(_ChangeNewPasswordVisibility value)?
         changeNewPasswordVisibility,
+    TResult Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult Function(_DeleteAccount value)? deleteAccount,
+    TResult Function(_DeleteAccountError value)? deleteAccountError,
     required TResult orElse(),
   }) {
     if (updateMyName != null) {
@@ -3267,6 +3519,9 @@ class _$UpdateMyNameErrorImpl implements _UpdateMyNameError {
     required TResult Function(String errorMsg) updatePasswordError,
     required TResult Function(bool visible) changeCurrentPasswordVisibility,
     required TResult Function(bool visible) changeNewPasswordVisibility,
+    required TResult Function() deleteAccountLoading,
+    required TResult Function() deleteAccount,
+    required TResult Function(String errorMsg) deleteAccountError,
   }) {
     return updateMyNameError(errorMsg);
   }
@@ -3293,6 +3548,9 @@ class _$UpdateMyNameErrorImpl implements _UpdateMyNameError {
     TResult? Function(String errorMsg)? updatePasswordError,
     TResult? Function(bool visible)? changeCurrentPasswordVisibility,
     TResult? Function(bool visible)? changeNewPasswordVisibility,
+    TResult? Function()? deleteAccountLoading,
+    TResult? Function()? deleteAccount,
+    TResult? Function(String errorMsg)? deleteAccountError,
   }) {
     return updateMyNameError?.call(errorMsg);
   }
@@ -3319,6 +3577,9 @@ class _$UpdateMyNameErrorImpl implements _UpdateMyNameError {
     TResult Function(String errorMsg)? updatePasswordError,
     TResult Function(bool visible)? changeCurrentPasswordVisibility,
     TResult Function(bool visible)? changeNewPasswordVisibility,
+    TResult Function()? deleteAccountLoading,
+    TResult Function()? deleteAccount,
+    TResult Function(String errorMsg)? deleteAccountError,
     required TResult orElse(),
   }) {
     if (updateMyNameError != null) {
@@ -3358,6 +3619,9 @@ class _$UpdateMyNameErrorImpl implements _UpdateMyNameError {
         changeCurrentPasswordVisibility,
     required TResult Function(_ChangeNewPasswordVisibility value)
         changeNewPasswordVisibility,
+    required TResult Function(_DeleteAccountLoading value) deleteAccountLoading,
+    required TResult Function(_DeleteAccount value) deleteAccount,
+    required TResult Function(_DeleteAccountError value) deleteAccountError,
   }) {
     return updateMyNameError(this);
   }
@@ -3388,6 +3652,9 @@ class _$UpdateMyNameErrorImpl implements _UpdateMyNameError {
         changeCurrentPasswordVisibility,
     TResult? Function(_ChangeNewPasswordVisibility value)?
         changeNewPasswordVisibility,
+    TResult? Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult? Function(_DeleteAccount value)? deleteAccount,
+    TResult? Function(_DeleteAccountError value)? deleteAccountError,
   }) {
     return updateMyNameError?.call(this);
   }
@@ -3418,6 +3685,9 @@ class _$UpdateMyNameErrorImpl implements _UpdateMyNameError {
         changeCurrentPasswordVisibility,
     TResult Function(_ChangeNewPasswordVisibility value)?
         changeNewPasswordVisibility,
+    TResult Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult Function(_DeleteAccount value)? deleteAccount,
+    TResult Function(_DeleteAccountError value)? deleteAccountError,
     required TResult orElse(),
   }) {
     if (updateMyNameError != null) {
@@ -3496,6 +3766,9 @@ class _$UpdatePasswordLoadingImpl implements _UpdatePasswordLoading {
     required TResult Function(String errorMsg) updatePasswordError,
     required TResult Function(bool visible) changeCurrentPasswordVisibility,
     required TResult Function(bool visible) changeNewPasswordVisibility,
+    required TResult Function() deleteAccountLoading,
+    required TResult Function() deleteAccount,
+    required TResult Function(String errorMsg) deleteAccountError,
   }) {
     return updatePasswordLoading();
   }
@@ -3522,6 +3795,9 @@ class _$UpdatePasswordLoadingImpl implements _UpdatePasswordLoading {
     TResult? Function(String errorMsg)? updatePasswordError,
     TResult? Function(bool visible)? changeCurrentPasswordVisibility,
     TResult? Function(bool visible)? changeNewPasswordVisibility,
+    TResult? Function()? deleteAccountLoading,
+    TResult? Function()? deleteAccount,
+    TResult? Function(String errorMsg)? deleteAccountError,
   }) {
     return updatePasswordLoading?.call();
   }
@@ -3548,6 +3824,9 @@ class _$UpdatePasswordLoadingImpl implements _UpdatePasswordLoading {
     TResult Function(String errorMsg)? updatePasswordError,
     TResult Function(bool visible)? changeCurrentPasswordVisibility,
     TResult Function(bool visible)? changeNewPasswordVisibility,
+    TResult Function()? deleteAccountLoading,
+    TResult Function()? deleteAccount,
+    TResult Function(String errorMsg)? deleteAccountError,
     required TResult orElse(),
   }) {
     if (updatePasswordLoading != null) {
@@ -3587,6 +3866,9 @@ class _$UpdatePasswordLoadingImpl implements _UpdatePasswordLoading {
         changeCurrentPasswordVisibility,
     required TResult Function(_ChangeNewPasswordVisibility value)
         changeNewPasswordVisibility,
+    required TResult Function(_DeleteAccountLoading value) deleteAccountLoading,
+    required TResult Function(_DeleteAccount value) deleteAccount,
+    required TResult Function(_DeleteAccountError value) deleteAccountError,
   }) {
     return updatePasswordLoading(this);
   }
@@ -3617,6 +3899,9 @@ class _$UpdatePasswordLoadingImpl implements _UpdatePasswordLoading {
         changeCurrentPasswordVisibility,
     TResult? Function(_ChangeNewPasswordVisibility value)?
         changeNewPasswordVisibility,
+    TResult? Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult? Function(_DeleteAccount value)? deleteAccount,
+    TResult? Function(_DeleteAccountError value)? deleteAccountError,
   }) {
     return updatePasswordLoading?.call(this);
   }
@@ -3647,6 +3932,9 @@ class _$UpdatePasswordLoadingImpl implements _UpdatePasswordLoading {
         changeCurrentPasswordVisibility,
     TResult Function(_ChangeNewPasswordVisibility value)?
         changeNewPasswordVisibility,
+    TResult Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult Function(_DeleteAccount value)? deleteAccount,
+    TResult Function(_DeleteAccountError value)? deleteAccountError,
     required TResult orElse(),
   }) {
     if (updatePasswordLoading != null) {
@@ -3717,6 +4005,9 @@ class _$UpdatePasswordImpl implements _UpdatePassword {
     required TResult Function(String errorMsg) updatePasswordError,
     required TResult Function(bool visible) changeCurrentPasswordVisibility,
     required TResult Function(bool visible) changeNewPasswordVisibility,
+    required TResult Function() deleteAccountLoading,
+    required TResult Function() deleteAccount,
+    required TResult Function(String errorMsg) deleteAccountError,
   }) {
     return updatePassword();
   }
@@ -3743,6 +4034,9 @@ class _$UpdatePasswordImpl implements _UpdatePassword {
     TResult? Function(String errorMsg)? updatePasswordError,
     TResult? Function(bool visible)? changeCurrentPasswordVisibility,
     TResult? Function(bool visible)? changeNewPasswordVisibility,
+    TResult? Function()? deleteAccountLoading,
+    TResult? Function()? deleteAccount,
+    TResult? Function(String errorMsg)? deleteAccountError,
   }) {
     return updatePassword?.call();
   }
@@ -3769,6 +4063,9 @@ class _$UpdatePasswordImpl implements _UpdatePassword {
     TResult Function(String errorMsg)? updatePasswordError,
     TResult Function(bool visible)? changeCurrentPasswordVisibility,
     TResult Function(bool visible)? changeNewPasswordVisibility,
+    TResult Function()? deleteAccountLoading,
+    TResult Function()? deleteAccount,
+    TResult Function(String errorMsg)? deleteAccountError,
     required TResult orElse(),
   }) {
     if (updatePassword != null) {
@@ -3808,6 +4105,9 @@ class _$UpdatePasswordImpl implements _UpdatePassword {
         changeCurrentPasswordVisibility,
     required TResult Function(_ChangeNewPasswordVisibility value)
         changeNewPasswordVisibility,
+    required TResult Function(_DeleteAccountLoading value) deleteAccountLoading,
+    required TResult Function(_DeleteAccount value) deleteAccount,
+    required TResult Function(_DeleteAccountError value) deleteAccountError,
   }) {
     return updatePassword(this);
   }
@@ -3838,6 +4138,9 @@ class _$UpdatePasswordImpl implements _UpdatePassword {
         changeCurrentPasswordVisibility,
     TResult? Function(_ChangeNewPasswordVisibility value)?
         changeNewPasswordVisibility,
+    TResult? Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult? Function(_DeleteAccount value)? deleteAccount,
+    TResult? Function(_DeleteAccountError value)? deleteAccountError,
   }) {
     return updatePassword?.call(this);
   }
@@ -3868,6 +4171,9 @@ class _$UpdatePasswordImpl implements _UpdatePassword {
         changeCurrentPasswordVisibility,
     TResult Function(_ChangeNewPasswordVisibility value)?
         changeNewPasswordVisibility,
+    TResult Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult Function(_DeleteAccount value)? deleteAccount,
+    TResult Function(_DeleteAccountError value)? deleteAccountError,
     required TResult orElse(),
   }) {
     if (updatePassword != null) {
@@ -3966,6 +4272,9 @@ class _$UpdatePasswordErrorImpl implements _UpdatePasswordError {
     required TResult Function(String errorMsg) updatePasswordError,
     required TResult Function(bool visible) changeCurrentPasswordVisibility,
     required TResult Function(bool visible) changeNewPasswordVisibility,
+    required TResult Function() deleteAccountLoading,
+    required TResult Function() deleteAccount,
+    required TResult Function(String errorMsg) deleteAccountError,
   }) {
     return updatePasswordError(errorMsg);
   }
@@ -3992,6 +4301,9 @@ class _$UpdatePasswordErrorImpl implements _UpdatePasswordError {
     TResult? Function(String errorMsg)? updatePasswordError,
     TResult? Function(bool visible)? changeCurrentPasswordVisibility,
     TResult? Function(bool visible)? changeNewPasswordVisibility,
+    TResult? Function()? deleteAccountLoading,
+    TResult? Function()? deleteAccount,
+    TResult? Function(String errorMsg)? deleteAccountError,
   }) {
     return updatePasswordError?.call(errorMsg);
   }
@@ -4018,6 +4330,9 @@ class _$UpdatePasswordErrorImpl implements _UpdatePasswordError {
     TResult Function(String errorMsg)? updatePasswordError,
     TResult Function(bool visible)? changeCurrentPasswordVisibility,
     TResult Function(bool visible)? changeNewPasswordVisibility,
+    TResult Function()? deleteAccountLoading,
+    TResult Function()? deleteAccount,
+    TResult Function(String errorMsg)? deleteAccountError,
     required TResult orElse(),
   }) {
     if (updatePasswordError != null) {
@@ -4057,6 +4372,9 @@ class _$UpdatePasswordErrorImpl implements _UpdatePasswordError {
         changeCurrentPasswordVisibility,
     required TResult Function(_ChangeNewPasswordVisibility value)
         changeNewPasswordVisibility,
+    required TResult Function(_DeleteAccountLoading value) deleteAccountLoading,
+    required TResult Function(_DeleteAccount value) deleteAccount,
+    required TResult Function(_DeleteAccountError value) deleteAccountError,
   }) {
     return updatePasswordError(this);
   }
@@ -4087,6 +4405,9 @@ class _$UpdatePasswordErrorImpl implements _UpdatePasswordError {
         changeCurrentPasswordVisibility,
     TResult? Function(_ChangeNewPasswordVisibility value)?
         changeNewPasswordVisibility,
+    TResult? Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult? Function(_DeleteAccount value)? deleteAccount,
+    TResult? Function(_DeleteAccountError value)? deleteAccountError,
   }) {
     return updatePasswordError?.call(this);
   }
@@ -4117,6 +4438,9 @@ class _$UpdatePasswordErrorImpl implements _UpdatePasswordError {
         changeCurrentPasswordVisibility,
     TResult Function(_ChangeNewPasswordVisibility value)?
         changeNewPasswordVisibility,
+    TResult Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult Function(_DeleteAccount value)? deleteAccount,
+    TResult Function(_DeleteAccountError value)? deleteAccountError,
     required TResult orElse(),
   }) {
     if (updatePasswordError != null) {
@@ -4225,6 +4549,9 @@ class _$ChangeCurrentPasswordVisibilityImpl
     required TResult Function(String errorMsg) updatePasswordError,
     required TResult Function(bool visible) changeCurrentPasswordVisibility,
     required TResult Function(bool visible) changeNewPasswordVisibility,
+    required TResult Function() deleteAccountLoading,
+    required TResult Function() deleteAccount,
+    required TResult Function(String errorMsg) deleteAccountError,
   }) {
     return changeCurrentPasswordVisibility(visible);
   }
@@ -4251,6 +4578,9 @@ class _$ChangeCurrentPasswordVisibilityImpl
     TResult? Function(String errorMsg)? updatePasswordError,
     TResult? Function(bool visible)? changeCurrentPasswordVisibility,
     TResult? Function(bool visible)? changeNewPasswordVisibility,
+    TResult? Function()? deleteAccountLoading,
+    TResult? Function()? deleteAccount,
+    TResult? Function(String errorMsg)? deleteAccountError,
   }) {
     return changeCurrentPasswordVisibility?.call(visible);
   }
@@ -4277,6 +4607,9 @@ class _$ChangeCurrentPasswordVisibilityImpl
     TResult Function(String errorMsg)? updatePasswordError,
     TResult Function(bool visible)? changeCurrentPasswordVisibility,
     TResult Function(bool visible)? changeNewPasswordVisibility,
+    TResult Function()? deleteAccountLoading,
+    TResult Function()? deleteAccount,
+    TResult Function(String errorMsg)? deleteAccountError,
     required TResult orElse(),
   }) {
     if (changeCurrentPasswordVisibility != null) {
@@ -4316,6 +4649,9 @@ class _$ChangeCurrentPasswordVisibilityImpl
         changeCurrentPasswordVisibility,
     required TResult Function(_ChangeNewPasswordVisibility value)
         changeNewPasswordVisibility,
+    required TResult Function(_DeleteAccountLoading value) deleteAccountLoading,
+    required TResult Function(_DeleteAccount value) deleteAccount,
+    required TResult Function(_DeleteAccountError value) deleteAccountError,
   }) {
     return changeCurrentPasswordVisibility(this);
   }
@@ -4346,6 +4682,9 @@ class _$ChangeCurrentPasswordVisibilityImpl
         changeCurrentPasswordVisibility,
     TResult? Function(_ChangeNewPasswordVisibility value)?
         changeNewPasswordVisibility,
+    TResult? Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult? Function(_DeleteAccount value)? deleteAccount,
+    TResult? Function(_DeleteAccountError value)? deleteAccountError,
   }) {
     return changeCurrentPasswordVisibility?.call(this);
   }
@@ -4376,6 +4715,9 @@ class _$ChangeCurrentPasswordVisibilityImpl
         changeCurrentPasswordVisibility,
     TResult Function(_ChangeNewPasswordVisibility value)?
         changeNewPasswordVisibility,
+    TResult Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult Function(_DeleteAccount value)? deleteAccount,
+    TResult Function(_DeleteAccountError value)? deleteAccountError,
     required TResult orElse(),
   }) {
     if (changeCurrentPasswordVisibility != null) {
@@ -4483,6 +4825,9 @@ class _$ChangeNewPasswordVisibilityImpl
     required TResult Function(String errorMsg) updatePasswordError,
     required TResult Function(bool visible) changeCurrentPasswordVisibility,
     required TResult Function(bool visible) changeNewPasswordVisibility,
+    required TResult Function() deleteAccountLoading,
+    required TResult Function() deleteAccount,
+    required TResult Function(String errorMsg) deleteAccountError,
   }) {
     return changeNewPasswordVisibility(visible);
   }
@@ -4509,6 +4854,9 @@ class _$ChangeNewPasswordVisibilityImpl
     TResult? Function(String errorMsg)? updatePasswordError,
     TResult? Function(bool visible)? changeCurrentPasswordVisibility,
     TResult? Function(bool visible)? changeNewPasswordVisibility,
+    TResult? Function()? deleteAccountLoading,
+    TResult? Function()? deleteAccount,
+    TResult? Function(String errorMsg)? deleteAccountError,
   }) {
     return changeNewPasswordVisibility?.call(visible);
   }
@@ -4535,6 +4883,9 @@ class _$ChangeNewPasswordVisibilityImpl
     TResult Function(String errorMsg)? updatePasswordError,
     TResult Function(bool visible)? changeCurrentPasswordVisibility,
     TResult Function(bool visible)? changeNewPasswordVisibility,
+    TResult Function()? deleteAccountLoading,
+    TResult Function()? deleteAccount,
+    TResult Function(String errorMsg)? deleteAccountError,
     required TResult orElse(),
   }) {
     if (changeNewPasswordVisibility != null) {
@@ -4574,6 +4925,9 @@ class _$ChangeNewPasswordVisibilityImpl
         changeCurrentPasswordVisibility,
     required TResult Function(_ChangeNewPasswordVisibility value)
         changeNewPasswordVisibility,
+    required TResult Function(_DeleteAccountLoading value) deleteAccountLoading,
+    required TResult Function(_DeleteAccount value) deleteAccount,
+    required TResult Function(_DeleteAccountError value) deleteAccountError,
   }) {
     return changeNewPasswordVisibility(this);
   }
@@ -4604,6 +4958,9 @@ class _$ChangeNewPasswordVisibilityImpl
         changeCurrentPasswordVisibility,
     TResult? Function(_ChangeNewPasswordVisibility value)?
         changeNewPasswordVisibility,
+    TResult? Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult? Function(_DeleteAccount value)? deleteAccount,
+    TResult? Function(_DeleteAccountError value)? deleteAccountError,
   }) {
     return changeNewPasswordVisibility?.call(this);
   }
@@ -4634,6 +4991,9 @@ class _$ChangeNewPasswordVisibilityImpl
         changeCurrentPasswordVisibility,
     TResult Function(_ChangeNewPasswordVisibility value)?
         changeNewPasswordVisibility,
+    TResult Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult Function(_DeleteAccount value)? deleteAccount,
+    TResult Function(_DeleteAccountError value)? deleteAccountError,
     required TResult orElse(),
   }) {
     if (changeNewPasswordVisibility != null) {
@@ -4651,4 +5011,756 @@ abstract class _ChangeNewPasswordVisibility implements ProfileState {
   @JsonKey(ignore: true)
   _$$ChangeNewPasswordVisibilityImplCopyWith<_$ChangeNewPasswordVisibilityImpl>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$DeleteAccountLoadingImplCopyWith<$Res> {
+  factory _$$DeleteAccountLoadingImplCopyWith(_$DeleteAccountLoadingImpl value,
+          $Res Function(_$DeleteAccountLoadingImpl) then) =
+      __$$DeleteAccountLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$DeleteAccountLoadingImplCopyWithImpl<$Res>
+    extends _$ProfileStateCopyWithImpl<$Res, _$DeleteAccountLoadingImpl>
+    implements _$$DeleteAccountLoadingImplCopyWith<$Res> {
+  __$$DeleteAccountLoadingImplCopyWithImpl(_$DeleteAccountLoadingImpl _value,
+      $Res Function(_$DeleteAccountLoadingImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$DeleteAccountLoadingImpl implements _DeleteAccountLoading {
+  const _$DeleteAccountLoadingImpl();
+
+  @override
+  String toString() {
+    return 'ProfileState.deleteAccountLoading()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DeleteAccountLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() disposeEditProfile,
+    required TResult Function() initChangePassword,
+    required TResult Function() disposeChangePassword,
+    required TResult Function() pickProfileImageLoading,
+    required TResult Function() pickProfileImage,
+    required TResult Function(String errorMsg) pickProfileImageError,
+    required TResult Function(double percentage) getProfileImagePercentage,
+    required TResult Function() updateProfileImageLoading,
+    required TResult Function() updateProfileImage,
+    required TResult Function(String errorMsg) updateProfileImageError,
+    required TResult Function() updateMyNameLoading,
+    required TResult Function() updateMyName,
+    required TResult Function(String errorMsg) updateMyNameError,
+    required TResult Function() updatePasswordLoading,
+    required TResult Function() updatePassword,
+    required TResult Function(String errorMsg) updatePasswordError,
+    required TResult Function(bool visible) changeCurrentPasswordVisibility,
+    required TResult Function(bool visible) changeNewPasswordVisibility,
+    required TResult Function() deleteAccountLoading,
+    required TResult Function() deleteAccount,
+    required TResult Function(String errorMsg) deleteAccountError,
+  }) {
+    return deleteAccountLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? disposeEditProfile,
+    TResult? Function()? initChangePassword,
+    TResult? Function()? disposeChangePassword,
+    TResult? Function()? pickProfileImageLoading,
+    TResult? Function()? pickProfileImage,
+    TResult? Function(String errorMsg)? pickProfileImageError,
+    TResult? Function(double percentage)? getProfileImagePercentage,
+    TResult? Function()? updateProfileImageLoading,
+    TResult? Function()? updateProfileImage,
+    TResult? Function(String errorMsg)? updateProfileImageError,
+    TResult? Function()? updateMyNameLoading,
+    TResult? Function()? updateMyName,
+    TResult? Function(String errorMsg)? updateMyNameError,
+    TResult? Function()? updatePasswordLoading,
+    TResult? Function()? updatePassword,
+    TResult? Function(String errorMsg)? updatePasswordError,
+    TResult? Function(bool visible)? changeCurrentPasswordVisibility,
+    TResult? Function(bool visible)? changeNewPasswordVisibility,
+    TResult? Function()? deleteAccountLoading,
+    TResult? Function()? deleteAccount,
+    TResult? Function(String errorMsg)? deleteAccountError,
+  }) {
+    return deleteAccountLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? disposeEditProfile,
+    TResult Function()? initChangePassword,
+    TResult Function()? disposeChangePassword,
+    TResult Function()? pickProfileImageLoading,
+    TResult Function()? pickProfileImage,
+    TResult Function(String errorMsg)? pickProfileImageError,
+    TResult Function(double percentage)? getProfileImagePercentage,
+    TResult Function()? updateProfileImageLoading,
+    TResult Function()? updateProfileImage,
+    TResult Function(String errorMsg)? updateProfileImageError,
+    TResult Function()? updateMyNameLoading,
+    TResult Function()? updateMyName,
+    TResult Function(String errorMsg)? updateMyNameError,
+    TResult Function()? updatePasswordLoading,
+    TResult Function()? updatePassword,
+    TResult Function(String errorMsg)? updatePasswordError,
+    TResult Function(bool visible)? changeCurrentPasswordVisibility,
+    TResult Function(bool visible)? changeNewPasswordVisibility,
+    TResult Function()? deleteAccountLoading,
+    TResult Function()? deleteAccount,
+    TResult Function(String errorMsg)? deleteAccountError,
+    required TResult orElse(),
+  }) {
+    if (deleteAccountLoading != null) {
+      return deleteAccountLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_DisposeEditProfile value) disposeEditProfile,
+    required TResult Function(_InitChangePassword value) initChangePassword,
+    required TResult Function(_DisposeChangePassword value)
+        disposeChangePassword,
+    required TResult Function(_pickProfileImageLoading value)
+        pickProfileImageLoading,
+    required TResult Function(_pickProfileImage value) pickProfileImage,
+    required TResult Function(_pickProfileImageError value)
+        pickProfileImageError,
+    required TResult Function(_GetProfileImagePercentage value)
+        getProfileImagePercentage,
+    required TResult Function(_UpdateProfileImageLoading value)
+        updateProfileImageLoading,
+    required TResult Function(_UpdateProfileImage value) updateProfileImage,
+    required TResult Function(_UpdateProfileImageError value)
+        updateProfileImageError,
+    required TResult Function(_UpdateMyNameLoading value) updateMyNameLoading,
+    required TResult Function(_UpdateMyName value) updateMyName,
+    required TResult Function(_UpdateMyNameError value) updateMyNameError,
+    required TResult Function(_UpdatePasswordLoading value)
+        updatePasswordLoading,
+    required TResult Function(_UpdatePassword value) updatePassword,
+    required TResult Function(_UpdatePasswordError value) updatePasswordError,
+    required TResult Function(_ChangeCurrentPasswordVisibility value)
+        changeCurrentPasswordVisibility,
+    required TResult Function(_ChangeNewPasswordVisibility value)
+        changeNewPasswordVisibility,
+    required TResult Function(_DeleteAccountLoading value) deleteAccountLoading,
+    required TResult Function(_DeleteAccount value) deleteAccount,
+    required TResult Function(_DeleteAccountError value) deleteAccountError,
+  }) {
+    return deleteAccountLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_DisposeEditProfile value)? disposeEditProfile,
+    TResult? Function(_InitChangePassword value)? initChangePassword,
+    TResult? Function(_DisposeChangePassword value)? disposeChangePassword,
+    TResult? Function(_pickProfileImageLoading value)? pickProfileImageLoading,
+    TResult? Function(_pickProfileImage value)? pickProfileImage,
+    TResult? Function(_pickProfileImageError value)? pickProfileImageError,
+    TResult? Function(_GetProfileImagePercentage value)?
+        getProfileImagePercentage,
+    TResult? Function(_UpdateProfileImageLoading value)?
+        updateProfileImageLoading,
+    TResult? Function(_UpdateProfileImage value)? updateProfileImage,
+    TResult? Function(_UpdateProfileImageError value)? updateProfileImageError,
+    TResult? Function(_UpdateMyNameLoading value)? updateMyNameLoading,
+    TResult? Function(_UpdateMyName value)? updateMyName,
+    TResult? Function(_UpdateMyNameError value)? updateMyNameError,
+    TResult? Function(_UpdatePasswordLoading value)? updatePasswordLoading,
+    TResult? Function(_UpdatePassword value)? updatePassword,
+    TResult? Function(_UpdatePasswordError value)? updatePasswordError,
+    TResult? Function(_ChangeCurrentPasswordVisibility value)?
+        changeCurrentPasswordVisibility,
+    TResult? Function(_ChangeNewPasswordVisibility value)?
+        changeNewPasswordVisibility,
+    TResult? Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult? Function(_DeleteAccount value)? deleteAccount,
+    TResult? Function(_DeleteAccountError value)? deleteAccountError,
+  }) {
+    return deleteAccountLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_DisposeEditProfile value)? disposeEditProfile,
+    TResult Function(_InitChangePassword value)? initChangePassword,
+    TResult Function(_DisposeChangePassword value)? disposeChangePassword,
+    TResult Function(_pickProfileImageLoading value)? pickProfileImageLoading,
+    TResult Function(_pickProfileImage value)? pickProfileImage,
+    TResult Function(_pickProfileImageError value)? pickProfileImageError,
+    TResult Function(_GetProfileImagePercentage value)?
+        getProfileImagePercentage,
+    TResult Function(_UpdateProfileImageLoading value)?
+        updateProfileImageLoading,
+    TResult Function(_UpdateProfileImage value)? updateProfileImage,
+    TResult Function(_UpdateProfileImageError value)? updateProfileImageError,
+    TResult Function(_UpdateMyNameLoading value)? updateMyNameLoading,
+    TResult Function(_UpdateMyName value)? updateMyName,
+    TResult Function(_UpdateMyNameError value)? updateMyNameError,
+    TResult Function(_UpdatePasswordLoading value)? updatePasswordLoading,
+    TResult Function(_UpdatePassword value)? updatePassword,
+    TResult Function(_UpdatePasswordError value)? updatePasswordError,
+    TResult Function(_ChangeCurrentPasswordVisibility value)?
+        changeCurrentPasswordVisibility,
+    TResult Function(_ChangeNewPasswordVisibility value)?
+        changeNewPasswordVisibility,
+    TResult Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult Function(_DeleteAccount value)? deleteAccount,
+    TResult Function(_DeleteAccountError value)? deleteAccountError,
+    required TResult orElse(),
+  }) {
+    if (deleteAccountLoading != null) {
+      return deleteAccountLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _DeleteAccountLoading implements ProfileState {
+  const factory _DeleteAccountLoading() = _$DeleteAccountLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$DeleteAccountImplCopyWith<$Res> {
+  factory _$$DeleteAccountImplCopyWith(
+          _$DeleteAccountImpl value, $Res Function(_$DeleteAccountImpl) then) =
+      __$$DeleteAccountImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$DeleteAccountImplCopyWithImpl<$Res>
+    extends _$ProfileStateCopyWithImpl<$Res, _$DeleteAccountImpl>
+    implements _$$DeleteAccountImplCopyWith<$Res> {
+  __$$DeleteAccountImplCopyWithImpl(
+      _$DeleteAccountImpl _value, $Res Function(_$DeleteAccountImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$DeleteAccountImpl implements _DeleteAccount {
+  const _$DeleteAccountImpl();
+
+  @override
+  String toString() {
+    return 'ProfileState.deleteAccount()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$DeleteAccountImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() disposeEditProfile,
+    required TResult Function() initChangePassword,
+    required TResult Function() disposeChangePassword,
+    required TResult Function() pickProfileImageLoading,
+    required TResult Function() pickProfileImage,
+    required TResult Function(String errorMsg) pickProfileImageError,
+    required TResult Function(double percentage) getProfileImagePercentage,
+    required TResult Function() updateProfileImageLoading,
+    required TResult Function() updateProfileImage,
+    required TResult Function(String errorMsg) updateProfileImageError,
+    required TResult Function() updateMyNameLoading,
+    required TResult Function() updateMyName,
+    required TResult Function(String errorMsg) updateMyNameError,
+    required TResult Function() updatePasswordLoading,
+    required TResult Function() updatePassword,
+    required TResult Function(String errorMsg) updatePasswordError,
+    required TResult Function(bool visible) changeCurrentPasswordVisibility,
+    required TResult Function(bool visible) changeNewPasswordVisibility,
+    required TResult Function() deleteAccountLoading,
+    required TResult Function() deleteAccount,
+    required TResult Function(String errorMsg) deleteAccountError,
+  }) {
+    return deleteAccount();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? disposeEditProfile,
+    TResult? Function()? initChangePassword,
+    TResult? Function()? disposeChangePassword,
+    TResult? Function()? pickProfileImageLoading,
+    TResult? Function()? pickProfileImage,
+    TResult? Function(String errorMsg)? pickProfileImageError,
+    TResult? Function(double percentage)? getProfileImagePercentage,
+    TResult? Function()? updateProfileImageLoading,
+    TResult? Function()? updateProfileImage,
+    TResult? Function(String errorMsg)? updateProfileImageError,
+    TResult? Function()? updateMyNameLoading,
+    TResult? Function()? updateMyName,
+    TResult? Function(String errorMsg)? updateMyNameError,
+    TResult? Function()? updatePasswordLoading,
+    TResult? Function()? updatePassword,
+    TResult? Function(String errorMsg)? updatePasswordError,
+    TResult? Function(bool visible)? changeCurrentPasswordVisibility,
+    TResult? Function(bool visible)? changeNewPasswordVisibility,
+    TResult? Function()? deleteAccountLoading,
+    TResult? Function()? deleteAccount,
+    TResult? Function(String errorMsg)? deleteAccountError,
+  }) {
+    return deleteAccount?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? disposeEditProfile,
+    TResult Function()? initChangePassword,
+    TResult Function()? disposeChangePassword,
+    TResult Function()? pickProfileImageLoading,
+    TResult Function()? pickProfileImage,
+    TResult Function(String errorMsg)? pickProfileImageError,
+    TResult Function(double percentage)? getProfileImagePercentage,
+    TResult Function()? updateProfileImageLoading,
+    TResult Function()? updateProfileImage,
+    TResult Function(String errorMsg)? updateProfileImageError,
+    TResult Function()? updateMyNameLoading,
+    TResult Function()? updateMyName,
+    TResult Function(String errorMsg)? updateMyNameError,
+    TResult Function()? updatePasswordLoading,
+    TResult Function()? updatePassword,
+    TResult Function(String errorMsg)? updatePasswordError,
+    TResult Function(bool visible)? changeCurrentPasswordVisibility,
+    TResult Function(bool visible)? changeNewPasswordVisibility,
+    TResult Function()? deleteAccountLoading,
+    TResult Function()? deleteAccount,
+    TResult Function(String errorMsg)? deleteAccountError,
+    required TResult orElse(),
+  }) {
+    if (deleteAccount != null) {
+      return deleteAccount();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_DisposeEditProfile value) disposeEditProfile,
+    required TResult Function(_InitChangePassword value) initChangePassword,
+    required TResult Function(_DisposeChangePassword value)
+        disposeChangePassword,
+    required TResult Function(_pickProfileImageLoading value)
+        pickProfileImageLoading,
+    required TResult Function(_pickProfileImage value) pickProfileImage,
+    required TResult Function(_pickProfileImageError value)
+        pickProfileImageError,
+    required TResult Function(_GetProfileImagePercentage value)
+        getProfileImagePercentage,
+    required TResult Function(_UpdateProfileImageLoading value)
+        updateProfileImageLoading,
+    required TResult Function(_UpdateProfileImage value) updateProfileImage,
+    required TResult Function(_UpdateProfileImageError value)
+        updateProfileImageError,
+    required TResult Function(_UpdateMyNameLoading value) updateMyNameLoading,
+    required TResult Function(_UpdateMyName value) updateMyName,
+    required TResult Function(_UpdateMyNameError value) updateMyNameError,
+    required TResult Function(_UpdatePasswordLoading value)
+        updatePasswordLoading,
+    required TResult Function(_UpdatePassword value) updatePassword,
+    required TResult Function(_UpdatePasswordError value) updatePasswordError,
+    required TResult Function(_ChangeCurrentPasswordVisibility value)
+        changeCurrentPasswordVisibility,
+    required TResult Function(_ChangeNewPasswordVisibility value)
+        changeNewPasswordVisibility,
+    required TResult Function(_DeleteAccountLoading value) deleteAccountLoading,
+    required TResult Function(_DeleteAccount value) deleteAccount,
+    required TResult Function(_DeleteAccountError value) deleteAccountError,
+  }) {
+    return deleteAccount(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_DisposeEditProfile value)? disposeEditProfile,
+    TResult? Function(_InitChangePassword value)? initChangePassword,
+    TResult? Function(_DisposeChangePassword value)? disposeChangePassword,
+    TResult? Function(_pickProfileImageLoading value)? pickProfileImageLoading,
+    TResult? Function(_pickProfileImage value)? pickProfileImage,
+    TResult? Function(_pickProfileImageError value)? pickProfileImageError,
+    TResult? Function(_GetProfileImagePercentage value)?
+        getProfileImagePercentage,
+    TResult? Function(_UpdateProfileImageLoading value)?
+        updateProfileImageLoading,
+    TResult? Function(_UpdateProfileImage value)? updateProfileImage,
+    TResult? Function(_UpdateProfileImageError value)? updateProfileImageError,
+    TResult? Function(_UpdateMyNameLoading value)? updateMyNameLoading,
+    TResult? Function(_UpdateMyName value)? updateMyName,
+    TResult? Function(_UpdateMyNameError value)? updateMyNameError,
+    TResult? Function(_UpdatePasswordLoading value)? updatePasswordLoading,
+    TResult? Function(_UpdatePassword value)? updatePassword,
+    TResult? Function(_UpdatePasswordError value)? updatePasswordError,
+    TResult? Function(_ChangeCurrentPasswordVisibility value)?
+        changeCurrentPasswordVisibility,
+    TResult? Function(_ChangeNewPasswordVisibility value)?
+        changeNewPasswordVisibility,
+    TResult? Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult? Function(_DeleteAccount value)? deleteAccount,
+    TResult? Function(_DeleteAccountError value)? deleteAccountError,
+  }) {
+    return deleteAccount?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_DisposeEditProfile value)? disposeEditProfile,
+    TResult Function(_InitChangePassword value)? initChangePassword,
+    TResult Function(_DisposeChangePassword value)? disposeChangePassword,
+    TResult Function(_pickProfileImageLoading value)? pickProfileImageLoading,
+    TResult Function(_pickProfileImage value)? pickProfileImage,
+    TResult Function(_pickProfileImageError value)? pickProfileImageError,
+    TResult Function(_GetProfileImagePercentage value)?
+        getProfileImagePercentage,
+    TResult Function(_UpdateProfileImageLoading value)?
+        updateProfileImageLoading,
+    TResult Function(_UpdateProfileImage value)? updateProfileImage,
+    TResult Function(_UpdateProfileImageError value)? updateProfileImageError,
+    TResult Function(_UpdateMyNameLoading value)? updateMyNameLoading,
+    TResult Function(_UpdateMyName value)? updateMyName,
+    TResult Function(_UpdateMyNameError value)? updateMyNameError,
+    TResult Function(_UpdatePasswordLoading value)? updatePasswordLoading,
+    TResult Function(_UpdatePassword value)? updatePassword,
+    TResult Function(_UpdatePasswordError value)? updatePasswordError,
+    TResult Function(_ChangeCurrentPasswordVisibility value)?
+        changeCurrentPasswordVisibility,
+    TResult Function(_ChangeNewPasswordVisibility value)?
+        changeNewPasswordVisibility,
+    TResult Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult Function(_DeleteAccount value)? deleteAccount,
+    TResult Function(_DeleteAccountError value)? deleteAccountError,
+    required TResult orElse(),
+  }) {
+    if (deleteAccount != null) {
+      return deleteAccount(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _DeleteAccount implements ProfileState {
+  const factory _DeleteAccount() = _$DeleteAccountImpl;
+}
+
+/// @nodoc
+abstract class _$$DeleteAccountErrorImplCopyWith<$Res> {
+  factory _$$DeleteAccountErrorImplCopyWith(_$DeleteAccountErrorImpl value,
+          $Res Function(_$DeleteAccountErrorImpl) then) =
+      __$$DeleteAccountErrorImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String errorMsg});
+}
+
+/// @nodoc
+class __$$DeleteAccountErrorImplCopyWithImpl<$Res>
+    extends _$ProfileStateCopyWithImpl<$Res, _$DeleteAccountErrorImpl>
+    implements _$$DeleteAccountErrorImplCopyWith<$Res> {
+  __$$DeleteAccountErrorImplCopyWithImpl(_$DeleteAccountErrorImpl _value,
+      $Res Function(_$DeleteAccountErrorImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? errorMsg = null,
+  }) {
+    return _then(_$DeleteAccountErrorImpl(
+      null == errorMsg
+          ? _value.errorMsg
+          : errorMsg // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$DeleteAccountErrorImpl implements _DeleteAccountError {
+  const _$DeleteAccountErrorImpl(this.errorMsg);
+
+  @override
+  final String errorMsg;
+
+  @override
+  String toString() {
+    return 'ProfileState.deleteAccountError(errorMsg: $errorMsg)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DeleteAccountErrorImpl &&
+            (identical(other.errorMsg, errorMsg) ||
+                other.errorMsg == errorMsg));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, errorMsg);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DeleteAccountErrorImplCopyWith<_$DeleteAccountErrorImpl> get copyWith =>
+      __$$DeleteAccountErrorImplCopyWithImpl<_$DeleteAccountErrorImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() disposeEditProfile,
+    required TResult Function() initChangePassword,
+    required TResult Function() disposeChangePassword,
+    required TResult Function() pickProfileImageLoading,
+    required TResult Function() pickProfileImage,
+    required TResult Function(String errorMsg) pickProfileImageError,
+    required TResult Function(double percentage) getProfileImagePercentage,
+    required TResult Function() updateProfileImageLoading,
+    required TResult Function() updateProfileImage,
+    required TResult Function(String errorMsg) updateProfileImageError,
+    required TResult Function() updateMyNameLoading,
+    required TResult Function() updateMyName,
+    required TResult Function(String errorMsg) updateMyNameError,
+    required TResult Function() updatePasswordLoading,
+    required TResult Function() updatePassword,
+    required TResult Function(String errorMsg) updatePasswordError,
+    required TResult Function(bool visible) changeCurrentPasswordVisibility,
+    required TResult Function(bool visible) changeNewPasswordVisibility,
+    required TResult Function() deleteAccountLoading,
+    required TResult Function() deleteAccount,
+    required TResult Function(String errorMsg) deleteAccountError,
+  }) {
+    return deleteAccountError(errorMsg);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? disposeEditProfile,
+    TResult? Function()? initChangePassword,
+    TResult? Function()? disposeChangePassword,
+    TResult? Function()? pickProfileImageLoading,
+    TResult? Function()? pickProfileImage,
+    TResult? Function(String errorMsg)? pickProfileImageError,
+    TResult? Function(double percentage)? getProfileImagePercentage,
+    TResult? Function()? updateProfileImageLoading,
+    TResult? Function()? updateProfileImage,
+    TResult? Function(String errorMsg)? updateProfileImageError,
+    TResult? Function()? updateMyNameLoading,
+    TResult? Function()? updateMyName,
+    TResult? Function(String errorMsg)? updateMyNameError,
+    TResult? Function()? updatePasswordLoading,
+    TResult? Function()? updatePassword,
+    TResult? Function(String errorMsg)? updatePasswordError,
+    TResult? Function(bool visible)? changeCurrentPasswordVisibility,
+    TResult? Function(bool visible)? changeNewPasswordVisibility,
+    TResult? Function()? deleteAccountLoading,
+    TResult? Function()? deleteAccount,
+    TResult? Function(String errorMsg)? deleteAccountError,
+  }) {
+    return deleteAccountError?.call(errorMsg);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? disposeEditProfile,
+    TResult Function()? initChangePassword,
+    TResult Function()? disposeChangePassword,
+    TResult Function()? pickProfileImageLoading,
+    TResult Function()? pickProfileImage,
+    TResult Function(String errorMsg)? pickProfileImageError,
+    TResult Function(double percentage)? getProfileImagePercentage,
+    TResult Function()? updateProfileImageLoading,
+    TResult Function()? updateProfileImage,
+    TResult Function(String errorMsg)? updateProfileImageError,
+    TResult Function()? updateMyNameLoading,
+    TResult Function()? updateMyName,
+    TResult Function(String errorMsg)? updateMyNameError,
+    TResult Function()? updatePasswordLoading,
+    TResult Function()? updatePassword,
+    TResult Function(String errorMsg)? updatePasswordError,
+    TResult Function(bool visible)? changeCurrentPasswordVisibility,
+    TResult Function(bool visible)? changeNewPasswordVisibility,
+    TResult Function()? deleteAccountLoading,
+    TResult Function()? deleteAccount,
+    TResult Function(String errorMsg)? deleteAccountError,
+    required TResult orElse(),
+  }) {
+    if (deleteAccountError != null) {
+      return deleteAccountError(errorMsg);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_DisposeEditProfile value) disposeEditProfile,
+    required TResult Function(_InitChangePassword value) initChangePassword,
+    required TResult Function(_DisposeChangePassword value)
+        disposeChangePassword,
+    required TResult Function(_pickProfileImageLoading value)
+        pickProfileImageLoading,
+    required TResult Function(_pickProfileImage value) pickProfileImage,
+    required TResult Function(_pickProfileImageError value)
+        pickProfileImageError,
+    required TResult Function(_GetProfileImagePercentage value)
+        getProfileImagePercentage,
+    required TResult Function(_UpdateProfileImageLoading value)
+        updateProfileImageLoading,
+    required TResult Function(_UpdateProfileImage value) updateProfileImage,
+    required TResult Function(_UpdateProfileImageError value)
+        updateProfileImageError,
+    required TResult Function(_UpdateMyNameLoading value) updateMyNameLoading,
+    required TResult Function(_UpdateMyName value) updateMyName,
+    required TResult Function(_UpdateMyNameError value) updateMyNameError,
+    required TResult Function(_UpdatePasswordLoading value)
+        updatePasswordLoading,
+    required TResult Function(_UpdatePassword value) updatePassword,
+    required TResult Function(_UpdatePasswordError value) updatePasswordError,
+    required TResult Function(_ChangeCurrentPasswordVisibility value)
+        changeCurrentPasswordVisibility,
+    required TResult Function(_ChangeNewPasswordVisibility value)
+        changeNewPasswordVisibility,
+    required TResult Function(_DeleteAccountLoading value) deleteAccountLoading,
+    required TResult Function(_DeleteAccount value) deleteAccount,
+    required TResult Function(_DeleteAccountError value) deleteAccountError,
+  }) {
+    return deleteAccountError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_DisposeEditProfile value)? disposeEditProfile,
+    TResult? Function(_InitChangePassword value)? initChangePassword,
+    TResult? Function(_DisposeChangePassword value)? disposeChangePassword,
+    TResult? Function(_pickProfileImageLoading value)? pickProfileImageLoading,
+    TResult? Function(_pickProfileImage value)? pickProfileImage,
+    TResult? Function(_pickProfileImageError value)? pickProfileImageError,
+    TResult? Function(_GetProfileImagePercentage value)?
+        getProfileImagePercentage,
+    TResult? Function(_UpdateProfileImageLoading value)?
+        updateProfileImageLoading,
+    TResult? Function(_UpdateProfileImage value)? updateProfileImage,
+    TResult? Function(_UpdateProfileImageError value)? updateProfileImageError,
+    TResult? Function(_UpdateMyNameLoading value)? updateMyNameLoading,
+    TResult? Function(_UpdateMyName value)? updateMyName,
+    TResult? Function(_UpdateMyNameError value)? updateMyNameError,
+    TResult? Function(_UpdatePasswordLoading value)? updatePasswordLoading,
+    TResult? Function(_UpdatePassword value)? updatePassword,
+    TResult? Function(_UpdatePasswordError value)? updatePasswordError,
+    TResult? Function(_ChangeCurrentPasswordVisibility value)?
+        changeCurrentPasswordVisibility,
+    TResult? Function(_ChangeNewPasswordVisibility value)?
+        changeNewPasswordVisibility,
+    TResult? Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult? Function(_DeleteAccount value)? deleteAccount,
+    TResult? Function(_DeleteAccountError value)? deleteAccountError,
+  }) {
+    return deleteAccountError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_DisposeEditProfile value)? disposeEditProfile,
+    TResult Function(_InitChangePassword value)? initChangePassword,
+    TResult Function(_DisposeChangePassword value)? disposeChangePassword,
+    TResult Function(_pickProfileImageLoading value)? pickProfileImageLoading,
+    TResult Function(_pickProfileImage value)? pickProfileImage,
+    TResult Function(_pickProfileImageError value)? pickProfileImageError,
+    TResult Function(_GetProfileImagePercentage value)?
+        getProfileImagePercentage,
+    TResult Function(_UpdateProfileImageLoading value)?
+        updateProfileImageLoading,
+    TResult Function(_UpdateProfileImage value)? updateProfileImage,
+    TResult Function(_UpdateProfileImageError value)? updateProfileImageError,
+    TResult Function(_UpdateMyNameLoading value)? updateMyNameLoading,
+    TResult Function(_UpdateMyName value)? updateMyName,
+    TResult Function(_UpdateMyNameError value)? updateMyNameError,
+    TResult Function(_UpdatePasswordLoading value)? updatePasswordLoading,
+    TResult Function(_UpdatePassword value)? updatePassword,
+    TResult Function(_UpdatePasswordError value)? updatePasswordError,
+    TResult Function(_ChangeCurrentPasswordVisibility value)?
+        changeCurrentPasswordVisibility,
+    TResult Function(_ChangeNewPasswordVisibility value)?
+        changeNewPasswordVisibility,
+    TResult Function(_DeleteAccountLoading value)? deleteAccountLoading,
+    TResult Function(_DeleteAccount value)? deleteAccount,
+    TResult Function(_DeleteAccountError value)? deleteAccountError,
+    required TResult orElse(),
+  }) {
+    if (deleteAccountError != null) {
+      return deleteAccountError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _DeleteAccountError implements ProfileState {
+  const factory _DeleteAccountError(final String errorMsg) =
+      _$DeleteAccountErrorImpl;
+
+  String get errorMsg;
+  @JsonKey(ignore: true)
+  _$$DeleteAccountErrorImplCopyWith<_$DeleteAccountErrorImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
