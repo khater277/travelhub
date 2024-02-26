@@ -4,7 +4,6 @@ import 'package:travelhub/features/home/cubit/home_cubit.dart';
 import 'package:travelhub/features/home/presentation/widgets/nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:travelhub/features/hotels/cubit/hotels_cubit.dart';
 
 class HomeScreen extends StatefulWidget {
   final bool reAuth;

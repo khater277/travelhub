@@ -2,7 +2,6 @@ import 'package:travelhub/app/locator.dart';
 import 'package:travelhub/config/navigation.dart';
 import 'package:travelhub/core/shared_widgets/button.dart';
 import 'package:travelhub/core/shared_widgets/snack_bar.dart';
-import 'package:travelhub/core/shared_widgets/text.dart';
 import 'package:travelhub/core/utils/app_colors.dart';
 import 'package:travelhub/core/utils/app_values.dart';
 import 'package:travelhub/features/available_rooms/cubit/available_rooms_cubit.dart';
